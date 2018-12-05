@@ -82,6 +82,20 @@ body {
     text-align: center;
 }
 
+.content {
+	background: rgba(50, 50, 50, 0.7);
+	border-radius: 30px;
+	text-align: center;
+	color: white;
+	margin: 100 30 auto;
+}
+
+.menu-content {
+	background: rgba(50, 50, 50, 0.7);
+	border-radius: 30px;
+	color: white;
+}
+
 .welcome {
 	text-align: center;
 }
@@ -94,6 +108,7 @@ body {
 .footer {
 	width: 100%;
 	border: 1px solid darkred;
+	border-radius: 15px;
 	display: flex;
 	bottom: 0;
 	background-color: #35363A;
