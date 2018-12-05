@@ -21,12 +21,16 @@
 			echo "Connection ", ($connect ? "" : "NOT "), "established.<br />\n";
 			if (mysqli_connect_error()) { echo "Error details: ", mysqli_connect_error(), "\n"; }
 		?>
-		<h3>Drop the table</h3>
+		<h3>Drop the tables</h3>
 		<?php
 			$SQLcmd = "DROP TABLE Login"; 
 			echo "DROP statement: <br/><tt>",htmlspecialchars($SQLcmd),"</tt><br/>\n";
 			$results = mysqli_query($connect,$SQLcmd); 
 			echo "Result of DROP: <tt>", htmlspecialchars($results), "</tt><br/>\n";
+			$SQLcmd2 = "DROP TABLE menu";
+			echo "DROP statement: <br/><tt>",htmlspecialchars($SQLcmd),"</tt><br/>\n";
+			$results2 = mysqli_query($connect, $SQLcmd2);
+			echo "Result of DROP: <tt>", htmlspecialchars($results2),"</tt><br/>\n";
 		?>
 		<h3>Create new Table</h3>
 		<?php
@@ -35,6 +39,24 @@
 			echo "CREATE statement: <br/><tt>", htmlspecialchars($query),"</tt><br/>\n";
 			$result = mysqli_query($connect, $query);
 			echo "Result of Create: <tt>", htmlspecialchars($result), "</tt><br/>\n";
+		?>
+		<h3>Create Menu DB</h3>
+		<?php $query = "CREATE TABLE menu(name VARCHAR(30) PRIMARY KEY
+											, type VARCHAR(30)
+											, price DECIMAL (6,2)
+											, description VARCHAR(1000))";
+			echo "CREATE statement: <br/><tt>", htmlspecialchars($query),"</tt><br/>\n";
+			$result = mysqli_query($connect, $query);
+			echo "Result of Create:<tt>", htmlspecialchars($result), "</tt><br/>\n";
+		?>
+		
+		<h3>Insert Menu</h3>
+		<?php 
+			$stmt1 = "INSERT INTO menu(name, type, price, description) VALUES ('Homemade Soups','Shark Bites',3.25,'Ask your server for today\'s featured soups or try some of our famous homemade Chili or Veggie Chili. Large: $4.50')";
+			echo "Insert Statement: <code><pre>", htmlspecialchars($stmt1), "</pre></code><br/>\n";
+			$result = mysqli_query($connect, $stmt1);
+			if($result) { echo "Insert Successful";	}
+			else { echo "Insert Failure"; }
 		?>
 		<h3>Insert Admin</h3>
 		<?php
