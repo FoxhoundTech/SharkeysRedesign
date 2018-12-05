@@ -19,12 +19,13 @@
 			<a href="javascript:void(0);" class="icon" onclick="myFunction()">
 				<i class="fa fa-bars"></i>
 			</a>
-			<a href="#locations">Locations</a>
-			<a href="#events">Events</a>
-			<a href="#specials">Specials</a>
-			<a href="#drinks">Drinks</a>
-			<a href="#menu">Menu</a>
-			<a href="#home" class="active">Home</a>
+			<a id='location' href="#locations">Locations</a>
+			<a id='event' href="#events">Events</a>
+			<a id='special' href="#specials">Specials</a>
+			<a id='drink' href="#drinks">Drinks</a>
+			<a id='admin' href="admin.php">Admin</a>
+			<a id='menu' href="menu.php">Menu</a>
+			<a id='home' href="index.php">Home</a>
 		</div>
 	</body>
 </html>

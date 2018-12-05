@@ -175,5 +175,13 @@
 		</div>
 		
 		<?php require_once('footer.php'); ?>
+		
+		<script>
+			function updateNavbar() {
+				document.getElementById('home').className += " active";
+			}
+			
+			updateNavbar();
+		</script>
 	</body>
 </html>

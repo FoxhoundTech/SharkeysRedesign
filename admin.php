@@ -27,5 +27,13 @@
 			</form>
 		</div>
 		<a href="https://php.radford.edu//jsimmons49/SEProject/create-database.php">Create Database</a>
+		
+		<script>
+			function updateNavbar() {
+				document.getElementById('admin').className += " active";
+			}
+			
+			updateNavbar();
+		</script>
 	</body>
 </html>
