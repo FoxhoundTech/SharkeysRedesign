@@ -22,9 +22,17 @@
 			<h3>Login:</h3>
 			<form action="admin-handle.php" method='post'>
 				<p>Username: <input type='text' width='15' name='username' id='username' /></p>
-				<p>Password: <input type='text' width='15' name='password' id='password' /></p>
+				<p>Password: <input type='password' width='15' name='password' id='password' /></p>
 				<input type='submit' name='login-form' />
 			</form>
 		</div>
+		
+		<script>
+			function updateNavbar() {
+				document.getElementById('admin').className += " active";
+			}
+			
+			updateNavbar();
+		</script>
 	</body>
 </html>
