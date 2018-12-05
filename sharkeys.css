@@ -90,6 +90,12 @@ body {
 	margin: 100 30 auto;
 }
 
+.menu-content {
+	background: rgba(50, 50, 50, 0.7);
+	border-radius: 30px;
+	color: white;
+}
+
 .welcome {
 	text-align: center;
 }
