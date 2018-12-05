@@ -4,7 +4,7 @@
 		<link rel="stylesheet" href="sharkeys.css" type='text/css'>
 	</head>
 	
-	<body background='./background.jpg'>
+	<body>
 		<?php require_once('navbar.php'); ?>
 		
 		<div class='content'>
