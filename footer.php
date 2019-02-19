@@ -16,7 +16,6 @@
 			<div class='copyright-info'>
 				<p>Copyright 2018. All Rights Reserved.</p>
 				<p>Site by Foxhound Tech<p>
-				<h2>WE WILL HUNT YOU DOWN</h2>
 			</div>
 		</div>
 	</body>

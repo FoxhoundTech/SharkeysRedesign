@@ -1,5 +1,10 @@
-<!DOCTYPE html>
 <html>
+	<?php 
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+		require_once("se_db_password.php"); 
+		$connect = mysqli_connect("localhost", "jsimmons49", $mysql_password, "jsimmons49");
+	?>
 	<head>
 		<title>Menu</title>
 		<link rel="stylesheet" href="sharkeys.css" type='text/css'>
@@ -17,86 +22,23 @@
 				<h1>Shark Bites<h1>
 			</div>
 			
-			<div class="grid-container-a">
-				<div class="grid-item">
-					<h3>Homemade Soup<h3>
-					<h4> Ask your server for today's featured soups or try some of our famous homemade Chili or Veggie Chili.<h4>
-				</div>
-				
-				<div class="grid-item">
-					<h3>Soft Pretzels<h3>
-					<h4>Three giant‏ salted soft pretzels served with nacho cheese sauce for dippin'<h4>
-				</div>
-				
-				<div class="grid-item">
-					<h3>Creamy Avacado Dip<h3>
-					<h4>A blend of fresh avocados, cream cheese, tomatoes, jalapenos & onions. Served w/ tortilla chips.<h4>
-				</div>
-				
-				<div class="grid-item">
-					<h3>Cajun Crab Dip<h3>
-					<h4>Our signature homemade crab dip loaded w/ tons of crab meat. Served w/ fresh toasted bread.<h4>
-				</div>
-				
-				<div class="grid-item">
-					<h3>Spinach & Artichoke Dip<h3>
-					<h4>Homemade and served w/ fresh toasted bread.<h4>
-				</div>
-				
-				<div class="grid-item">
-					<h3>Buffalo Chicken Dip<h3>
-					<h4>Our homemade Spinach & Artichoke Dip loaded with grilled chicken and hot sauce. Served with tortilla chips.<h4>
-				</div>
-				
-				<div class="grid-item">
-					<h3>Deluxe Nachos<h3>
-					<h4>Tortilla chips topped w/ cheddar cheese sauce, homemade chili or veggie chili, shredded lettuce, diced tomatoes & onions, cheddar/jack cheese, and jalapenos. 
-						Finished w/ sour cream and homemade avocado dip.<h4>
-				</div>
-				
-				<div class="grid-item">
-					<h3>Fingers & Fries<h3>
-					<h4>Four chicken tenders w/ choice of any wing sauce and choice of fries.<h4>
-				</div>
-		
-				<div class="grid-item">
-					<h3>Grilled Quesadilla<h3>
-					<h4>Jam-packed w/ cheddar & jack cheese, bacon, tomatoes, onions & green peppers. Topped w/ jalapenos and served w/ sides of sour cream and salsa.<h4>
-				</div>
-				
-				<div class="grid-item">
-					<h3>Basket of Freis or Tots<h3>
-					<h4>Seasoned Fries, Waffle Fries, or Tater Tots<h4>
-				</div>
-				
-				<div class="grid-item">
-					<h3>Chili-Cheese Fries<h3>
-					<h4>A basket of fries, topped w/ chili, cheddar cheese sauce & jalapenos<h4>
-				</div>
-				
-				<div class="grid-item">
-					<h3>Beer-battered Onion Rings<h3>
-					<h4>Served w/ horseradish sauce <h4>
-				</div>
-				
-				<div class="grid-item">
-					<h3>Fried Pickles<h3>
-					<h4>Kosher dill pickle spears, breaded & fried, served w/ horseradish sauce<h4>
-				</div>
-				
-				<div class="grid-item">
-					<h3>Fried Mac & Cheese Wedges<h3>
-					<h4>Classic mac & cheese, breaded & fried, served with marinara sauce<h4>
-				</div>
-				
-				<div class="grid-item">
-					<h3>Fingers & Fries<h3>
-					<h4>Four chicken tenders w/ choice of any wing sauce and choice of fries.<h4>
-				</div>
-			
-				<div class="grid-item">
-					<h3>Mozzarella Sticks<h3>
-					<h4>Fried until golden brown, served w/ marinara sauce.<h4>
+			<div class='menu-section'>
+				<div class='grid-container-a'>
+				<?php
+					$appQuery = "SELECT * FROM menu WHERE type = 'Shark Bites'";
+					$results = mysqli_query($connect, $appQuery);
+					if($results) {
+						while($row = mysqli_fetch_assoc($results)) {
+							echo "<div class='grid-item'>";
+							echo "<h3>" . htmlspecialchars($row['name']) . ". . . $" . htmlspecialchars($row['price']) . "</h3>";
+							echo "<h4>" . htmlspecialchars($row['description']) . "</h4>";
+							echo "</div>";
+						}
+					} else {
+						echo "Failed";
+					}
+					mysqli_close($connect);
+				?>
 				</div>
 			</div>
 		
