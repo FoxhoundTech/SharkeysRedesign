@@ -17,12 +17,15 @@ body {
 
 .topnav {
   overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
   background-color: #35363A;
 }
 
 .topnav a {
   float: right;
-  display: inline-block;
+  display: block;
   color: #f2f2f2;
   text-align: center;
   padding: 14px 16px;
@@ -70,8 +73,8 @@ body {
     font-size: 20px;
     width: 20%;
     position: relative;
-    background: #f2f2f2;
-    color: #ffffff;
+    background: #35363A;
+    color: white;
     margin: 2em auto 3em;
     margin-bottom: 2em;
     border-radius: 25px;
@@ -80,6 +83,11 @@ body {
     padding-right: 20px;
     box-shadow: 5px 5px 5px 5px black;
     text-align: center;
+	margin-top: 100px;
+}
+
+.db-response {
+	color: white;
 }
 
 .content {
@@ -87,13 +95,18 @@ body {
 	border-radius: 30px;
 	text-align: center;
 	color: white;
-	margin: 100 30 auto;
+	margin-top: 100px;
+	margin-left: 30px;
+	margin-right: 30px;
 }
 
 .menu-content {
 	background: rgba(50, 50, 50, 0.7);
 	border-radius: 30px;
 	color: white;
+	margin-top: 100px;
+	margin-left: 30px;
+	margin-right: 30px;
 }
 
 .welcome {
@@ -106,6 +119,7 @@ body {
 }
 
 .footer {
+	all: initial;
 	width: 100%;
 	border: 1px solid darkred;
 	border-radius: 15px;
