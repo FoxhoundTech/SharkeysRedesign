@@ -11,7 +11,7 @@
 		<h3>Connect to the DB</h3>
 		<?php
 			require_once("se_db_password.php"); 
-			$connect = mysqli_connect("localhost", "jkolts", $mysql_password, "jkolts");
+			$connect = mysqli_connect("localhost", "jsimmons49", $mysql_password, "jsimmons49");
 
 			echo "Connection ", ($connect ? "" : "NOT "), "established.<br />\n";
 			if (mysqli_connect_error()) { echo "Error details: ", mysqli_connect_error(), "\n"; }

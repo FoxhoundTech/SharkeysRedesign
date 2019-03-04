@@ -3,17 +3,11 @@
 	ini_set('display_errors', 1);
 	require_once("se_db_password.php"); 
 	require_once("utils.php");
-	$connect = mysqli_connect("localhost", "jkolts", $mysql_password, "jkolts");
+	$connect = mysqli_connect("localhost", "jsimmons49", $mysql_password, "jsimmons49");
 	$title = "Menu";
 ?>
 <!DOCTYPE html>
 <html>
-	<?php 
-		error_reporting(E_ALL);
-		ini_set('display_errors', 1);
-		require_once("se_db_password.php"); 
-		$connect = mysqli_connect("localhost", "jsimmons49", $mysql_password, "jsimmons49");
-	?>
 	<head>
 	<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -26,8 +20,8 @@
 				height: 300px;
 			}			
 			.item, img{
-				height: 100% !important;
-				width:  100% !important;
+				height: 100%;
+				width:  100%;
 				border: 1px solid white;
 			}
 		</style>
