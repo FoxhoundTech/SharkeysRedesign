@@ -119,6 +119,7 @@ body {
 }
 
 .footer {
+	all: initial;
 	width: 100%;
 	border: 1px solid darkred;
 	border-radius: 15px;
