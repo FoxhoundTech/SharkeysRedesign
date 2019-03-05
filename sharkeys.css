@@ -13,6 +13,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   color: black;
+  min-height: 100%;
 }
 
 .topnav {
@@ -127,6 +128,7 @@ body {
 	bottom: 0;
 	background-color: #35363A;
 	color: white;
+	position: absolute;
 }
 
 .contact-info-footer {
