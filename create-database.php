@@ -479,363 +479,363 @@
 			
 			///////////////////////////////////////////////////////////////////////////////////////
 			
-			$stmt67 = "INSERT INTO menu(name, type, price, description) VALUES ('Grilled Chicken Breast Sandwich','Chicken Sandwiches',10,'Braised with your choice of lemon butter, any BBQ sauce, or Cajun style, topped with lettuce, tomato and onion. Served with mayo on the side.  Add cheese and Applewood smoked bacon $1.5')";
-			echo "Insert Statement: <code><pre>", htmlspecialchars($stmt67), "</pre></code><br/>\n";
-			$result = mysqli_query($connect, $stmt67);
+			$stmt68 = "INSERT INTO menu(name, type, price, description) VALUES ('Grilled Chicken Breast Sandwich','Chicken Sandwiches',10,'Braised with your choice of lemon butter, any BBQ sauce, or Cajun style, topped with lettuce, tomato and onion. Served with mayo on the side.  Add cheese and Applewood smoked bacon $1.5')";
+			echo "Insert Statement: <code><pre>", htmlspecialchars($stmt68), "</pre></code><br/>\n";
+			$result = mysqli_query($connect, $stmt68);
 			if($result) { echo "Insert Successful\n<br/>";	}
 			else { echo "<strong>Insert Failure</strong>\n<br>/<br>/"; }
 			
-			$stmt67 = "INSERT INTO menu(name, type, price, description) VALUES ('Jamaican Jerk Chicken Sandwich','Chicken Sandwiches',12.5,'Grilled chicken breast with our homemade Jamaican Jerk seasoning, topped with sweet and spicy Jamaican Relish, habanero-Jack cheese, Applewood smoked bacon, lettuce, tomato and onion.')";
-			echo "Insert Statement: <code><pre>", htmlspecialchars($stmt67), "</pre></code><br/>\n";
-			$result = mysqli_query($connect, $stmt67);
+			$stmt69 = "INSERT INTO menu(name, type, price, description) VALUES ('Jamaican Jerk Chicken Sandwich','Chicken Sandwiches',12.5,'Grilled chicken breast with our homemade Jamaican Jerk seasoning, topped with sweet and spicy Jamaican Relish, habanero-Jack cheese, Applewood smoked bacon, lettuce, tomato and onion.')";
+			echo "Insert Statement: <code><pre>", htmlspecialchars($stmt69), "</pre></code><br/>\n";
+			$result = mysqli_query($connect, $stmt69);
 			if($result) { echo "Insert Successful\n<br/>";	}
 			else { echo "<strong>Insert Failure</strong>\n<br>/<br>/"; }
 			
-			$stmt67 = "INSERT INTO menu(name, type, price, description) VALUES ('Hawaiian Chicken Sandwich','Chicken Sandwiches',11.5,'Grilled chicken breast topped with Teriyaki sauce, 2 grilled pineapple rings, and provolone cheese.')";
-			echo "Insert Statement: <code><pre>", htmlspecialchars($stmt67), "</pre></code><br/>\n";
-			$result = mysqli_query($connect, $stmt67);
+			$stmt70 = "INSERT INTO menu(name, type, price, description) VALUES ('Hawaiian Chicken Sandwich','Chicken Sandwiches',11.5,'Grilled chicken breast topped with Teriyaki sauce, 2 grilled pineapple rings, and provolone cheese.')";
+			echo "Insert Statement: <code><pre>", htmlspecialchars($stmt70), "</pre></code><br/>\n";
+			$result = mysqli_query($connect, $stmt70);
 			if($result) { echo "Insert Successful\n<br/>";	}
 			else { echo "<strong>Insert Failure</strong>\n<br>/<br>/"; }
 			
-			$stmt67 = "INSERT INTO menu(name, type, price, description) VALUES ('California Chicken Sandwich','Chicken Sandwiches',12.50,'Grilled chicken breast coated in our #4 Hokie Hot Sauce, topped with crumbled bleu cheese.')";
-			echo "Insert Statement: <code><pre>", htmlspecialchars($stmt67), "</pre></code><br/>\n";
-			$result = mysqli_query($connect, $stmt67);
+			$stmt71 = "INSERT INTO menu(name, type, price, description) VALUES ('California Chicken Sandwich','Chicken Sandwiches',12.50,'Grilled chicken breast coated in our #4 Hokie Hot Sauce, topped with crumbled bleu cheese.')";
+			echo "Insert Statement: <code><pre>", htmlspecialchars($stmt71), "</pre></code><br/>\n";
+			$result = mysqli_query($connect, $stmt71);
 			if($result) { echo "Insert Successful\n<br/>";	}
 			else { echo "<strong>Insert Failure</strong>\n<br>/<br>/"; }
 			
-			$stmt67 = "INSERT INTO menu(name, type, price, description) VALUES ('Buffalo  Chicken Sandwich','Chicken Sandwiches',11.50,'Braised with your choice of lemon butter, any BBQ sauce, or Cajun style, topped with lettuce, tomato and onion. Served with mayo on the side.  Add cheese and Applewood smoked bacon $1.5')";
-			echo "Insert Statement: <code><pre>", htmlspecialchars($stmt67), "</pre></code><br/>\n";
-			$result = mysqli_query($connect, $stmt67);
-			if($result) { echo "Insert Successful\n<br/>";	}
-			else { echo "<strong>Insert Failure</strong>\n<br>/<br>/"; }
-			
-			///////////////////////////////////////////////////////////////////////////////////////
-			
-			$stmt67 = "INSERT INTO menu(name, type, price, description) VALUES ('Philly Cheese Steak Sub','Subs',13,'Marinated and grilled steak with fresh mushrooms, onions and green peppers. Topped wwith melted white American cheese. Add lettuce, tomato and mayo at no extra charge.')";
-			echo "Insert Statement: <code><pre>", htmlspecialchars($stmt67), "</pre></code><br/>\n";
-			$result = mysqli_query($connect, $stmt67);
-			if($result) { echo "Insert Successful\n<br/>";	}
-			else { echo "<strong>Insert Failure</strong>\n<br>/<br>/"; }
-			
-			$stmt67 = "INSERT INTO menu(name, type, price, description) VALUES ('Chicken Fajita Sub,'Subs',10,'A Sharkey's original! Chicken breast strips grilled with fresh green peppers, onions and spices, topped wwith melted habanero-jack cheese.')";
-			echo "Insert Statement: <code><pre>", htmlspecialchars($stmt67), "</pre></code><br/>\n";
-			$result = mysqli_query($connect, $stmt67);
-			if($result) { echo "Insert Successful\n<br/>";	}
-			else { echo "<strong>Insert Failure</strong>\n<br>/<br>/"; }
-			
-			$stmt67 = "INSERT INTO menu(name, type, price, description) VALUES ('Cajun Mahi-Mahi Po-Boy','Subs',13,'Wild-caught Mahi,? grilled with Cajun spices and served on a toasted sub roll with lettuce, tomato, onions, and chipotle sauce.')";
-			echo "Insert Statement: <code><pre>", htmlspecialchars($stmt67), "</pre></code><br/>\n";
-			$result = mysqli_query($connect, $stmt67);
-			if($result) { echo "Insert Successful\n<br/>";	}
-			else { echo "<strong>Insert Failure</strong>\n<br>/<br>/"; }
-			
-			$stmt67 = "INSERT INTO menu(name, type, price, description) VALUES ('Chicken Parmesan Sub','Subs',11,'Chicken tenders topped with marinara sauce and loads of mozzarella cheese.')";
-			echo "Insert Statement: <code><pre>", htmlspecialchars($stmt67), "</pre></code><br/>\n";
-			$result = mysqli_query($connect, $stmt67);
-			if($result) { echo "Insert Successful\n<br/>";	}
-			else { echo "<strong>Insert Failure</strong>\n<br>/<br>/"; }
-			
-			$stmt67 = "INSERT INTO menu(name, type, price, description) VALUES ('Cheeseburger Sub','Subs',12,'Our half-pound Blacksburger diced and grilled with sauteed mushrooms and onions, and loaded with American cheese. Served on a toasted sub roll.')";
-			echo "Insert Statement: <code><pre>", htmlspecialchars($stmt67), "</pre></code><br/>\n";
-			$result = mysqli_query($connect, $stmt67);
-			if($result) { echo "Insert Successful\n<br/>";	}
-			else { echo "<strong>Insert Failure</strong>\n<br>/<br>/"; }
-			
-			$stmt67 = "INSERT INTO menu(name, type, price, description) VALUES ('Deli Sub','Subs',11,'Honey-baked ham and smoked turkey, topped with Applewood smoked bacon, provolone cheese, lettuce, tomato and onion. Served hot.')";
-			echo "Insert Statement: <code><pre>", htmlspecialchars($stmt67), "</pre></code><br/>\n";
-			$result = mysqli_query($connect, $stmt67);
-			if($result) { echo "Insert Successful\n<br/>";	}
-			else { echo "<strong>Insert Failure</strong>\n<br>/<br>/"; }
-			
-			$stmt67 = "INSERT INTO menu(name, type, price, description) VALUES ('Grilled Buffalo Shrimp Po'Boy','Subs',13,'Spicy grilled buffalo shrimp served on a sub roll with lettuce and tomato, and finished with chipotle sauce.')";
-			echo "Insert Statement: <code><pre>", htmlspecialchars($stmt67), "</pre></code><br/>\n";
-			$result = mysqli_query($connect, $stmt67);
+			$stmt72 = "INSERT INTO menu(name, type, price, description) VALUES ('Buffalo  Chicken Sandwich','Chicken Sandwiches',11.50,'Braised with your choice of lemon butter, any BBQ sauce, or Cajun style, topped with lettuce, tomato and onion. Served with mayo on the side.  Add cheese and Applewood smoked bacon $1.5')";
+			echo "Insert Statement: <code><pre>", htmlspecialchars($stmt72), "</pre></code><br/>\n";
+			$result = mysqli_query($connect, $stmt72);
 			if($result) { echo "Insert Successful\n<br/>";	}
 			else { echo "<strong>Insert Failure</strong>\n<br>/<br>/"; }
 			
 			///////////////////////////////////////////////////////////////////////////////////////
 			
-			$stmt67 = "INSERT INTO menu(name, type, price, description) VALUES ('The Blacksburger','Burgers',10,'A half-pound of the freshest ground beef, hand-pattied daily and flame-grilled to perfection. Served with lettuce, tomato, onion and mayo on the side.')";
-			echo "Insert Statement: <code><pre>", htmlspecialchars($stmt67), "</pre></code><br/>\n";
-			$result = mysqli_query($connect, $stmt67);
+			$stmt73 = "INSERT INTO menu(name, type, price, description) VALUES ('Philly Cheese Steak Sub','Subs',13,'Marinated and grilled steak with fresh mushrooms, onions and green peppers. Topped wwith melted white American cheese. Add lettuce, tomato and mayo at no extra charge.')";
+			echo "Insert Statement: <code><pre>", htmlspecialchars($stmt73), "</pre></code><br/>\n";
+			$result = mysqli_query($connect, $stmt73);
 			if($result) { echo "Insert Successful\n<br/>";	}
 			else { echo "<strong>Insert Failure</strong>\n<br>/<br>/"; }
 			
-			$stmt67 = "INSERT INTO menu(name, type, price, description) VALUES ('Bison Burger','Burgers',11.5,'Fresh ground bison meat, seasoned and grilled, served on a bun with lettuce, tomato, onion and mayo on the side.')";
-			echo "Insert Statement: <code><pre>", htmlspecialchars($stmt67), "</pre></code><br/>\n";
-			$result = mysqli_query($connect, $stmt67);
+			$stmt74 = "INSERT INTO menu(name, type, price, description) VALUES ('Chicken Fajita Sub,'Subs',10,'A Sharkey's original! Chicken breast strips grilled with fresh green peppers, onions and spices, topped wwith melted habanero-jack cheese.')";
+			echo "Insert Statement: <code><pre>", htmlspecialchars($stmt74), "</pre></code><br/>\n";
+			$result = mysqli_query($connect, $stmt74);
 			if($result) { echo "Insert Successful\n<br/>";	}
 			else { echo "<strong>Insert Failure</strong>\n<br>/<br>/"; }
 			
-			$stmt67 = "INSERT INTO menu(name, type, price, description) VALUES ('Steakhouse Burger','Burgers',12,'Topped with cheddar cheese, homemade crispy onion straws, Applewood-smoked bacon, LTO, and our soon-to-be-famous A1 Aioli!')";
-			echo "Insert Statement: <code><pre>", htmlspecialchars($stmt67), "</pre></code><br/>\n";
-			$result = mysqli_query($connect, $stmt67);
+			$stmt75 = "INSERT INTO menu(name, type, price, description) VALUES ('Cajun Mahi-Mahi Po-Boy','Subs',13,'Wild-caught Mahi,? grilled with Cajun spices and served on a toasted sub roll with lettuce, tomato, onions, and chipotle sauce.')";
+			echo "Insert Statement: <code><pre>", htmlspecialchars($stmt75), "</pre></code><br/>\n";
+			$result = mysqli_query($connect, $stmt75);
 			if($result) { echo "Insert Successful\n<br/>";	}
 			else { echo "<strong>Insert Failure</strong>\n<br>/<br>/"; }
 			
-			$stmt67 = "INSERT INTO menu(name, type, price, description) VALUES ('Black and Bleu Burger','Burgers',11,'Our Blacksburger piled high with bleu cheese, lettuce, tomato and onion.')";
-			echo "Insert Statement: <code><pre>", htmlspecialchars($stmt67), "</pre></code><br/>\n";
-			$result = mysqli_query($connect, $stmt67);
+			$stmt76 = "INSERT INTO menu(name, type, price, description) VALUES ('Chicken Parmesan Sub','Subs',11,'Chicken tenders topped with marinara sauce and loads of mozzarella cheese.')";
+			echo "Insert Statement: <code><pre>", htmlspecialchars($stmt76), "</pre></code><br/>\n";
+			$result = mysqli_query($connect, $stmt76);
 			if($result) { echo "Insert Successful\n<br/>";	}
 			else { echo "<strong>Insert Failure</strong>\n<br>/<br>/"; }
 			
-			$stmt67 = "INSERT INTO menu(name, type, price, description) VALUES ('California Burger','Burgers',12,'Our Blacksburger topped with avocado, bacon, Swiss, lettuce, tomato, onion and homemade ranch dressing.')";
-			echo "Insert Statement: <code><pre>", htmlspecialchars($stmt67), "</pre></code><br/>\n";
-			$result = mysqli_query($connect, $stmt67);
+			$stmt77 = "INSERT INTO menu(name, type, price, description) VALUES ('Cheeseburger Sub','Subs',12,'Our half-pound Blacksburger diced and grilled with sauteed mushrooms and onions, and loaded with American cheese. Served on a toasted sub roll.')";
+			echo "Insert Statement: <code><pre>", htmlspecialchars($stmt77), "</pre></code><br/>\n";
+			$result = mysqli_query($connect, $stmt77);
 			if($result) { echo "Insert Successful\n<br/>";	}
 			else { echo "<strong>Insert Failure</strong>\n<br>/<br>/"; }
 			
-			$stmt67 = "INSERT INTO menu(name, type, price, description) VALUES ('Tex-Mex Burger','Burgers',11.5,'Topped with our homemade chili, habanero-jack cheese, and jalapenos.')";
-			echo "Insert Statement: <code><pre>", htmlspecialchars($stmt67), "</pre></code><br/>\n";
-			$result = mysqli_query($connect, $stmt67);
+			$stmt78 = "INSERT INTO menu(name, type, price, description) VALUES ('Deli Sub','Subs',11,'Honey-baked ham and smoked turkey, topped with Applewood smoked bacon, provolone cheese, lettuce, tomato and onion. Served hot.')";
+			echo "Insert Statement: <code><pre>", htmlspecialchars($stmt78), "</pre></code><br/>\n";
+			$result = mysqli_query($connect, $stmt78);
 			if($result) { echo "Insert Successful\n<br/>";	}
 			else { echo "<strong>Insert Failure</strong>\n<br>/<br>/"; }
 			
-			$stmt67 = "INSERT INTO menu(name, type, price, description) VALUES ('Spin Dip Burger','Burgers',11.5,'Our Blacksburger topped with Spinach and Artichoke Dip, melted mozzarella, crushed red peppers, and L,T,O.')";
-			echo "Insert Statement: <code><pre>", htmlspecialchars($stmt67), "</pre></code><br/>\n";
-			$result = mysqli_query($connect, $stmt67);
+			$stmt79 = "INSERT INTO menu(name, type, price, description) VALUES ('Grilled Buffalo Shrimp Po'Boy','Subs',13,'Spicy grilled buffalo shrimp served on a sub roll with lettuce and tomato, and finished with chipotle sauce.')";
+			echo "Insert Statement: <code><pre>", htmlspecialchars($stmt79), "</pre></code><br/>\n";
+			$result = mysqli_query($connect, $stmt79);
 			if($result) { echo "Insert Successful\n<br/>";	}
 			else { echo "<strong>Insert Failure</strong>\n<br>/<br>/"; }
 			
-			$stmt67 = "INSERT INTO menu(name, type, price, description) VALUES ('BBQ Burger','Burgers',11.5,'Topped with a beer-battered onion ring, original BBQ sauce, and cheddar cheese.')";
-			echo "Insert Statement: <code><pre>", htmlspecialchars($stmt67), "</pre></code><br/>\n";
-			$result = mysqli_query($connect, $stmt67);
+			///////////////////////////////////////////////////////////////////////////////////////
+			
+			$stmt80 = "INSERT INTO menu(name, type, price, description) VALUES ('The Blacksburger','Burgers',10,'A half-pound of the freshest ground beef, hand-pattied daily and flame-grilled to perfection. Served with lettuce, tomato, onion and mayo on the side.')";
+			echo "Insert Statement: <code><pre>", htmlspecialchars($stmt80), "</pre></code><br/>\n";
+			$result = mysqli_query($connect, $stmt80);
 			if($result) { echo "Insert Successful\n<br/>";	}
 			else { echo "<strong>Insert Failure</strong>\n<br>/<br>/"; }
 			
-			$stmt67 = "INSERT INTO menu(name, type, price, description) VALUES ('Patty Melt','Burgers',11,'Piled high with sauteed onions and provolone cheese. Served on Texas toast.')";
-			echo "Insert Statement: <code><pre>", htmlspecialchars($stmt67), "</pre></code><br/>\n";
-			$result = mysqli_query($connect, $stmt67);
+			$stmt81 = "INSERT INTO menu(name, type, price, description) VALUES ('Bison Burger','Burgers',11.5,'Fresh ground bison meat, seasoned and grilled, served on a bun with lettuce, tomato, onion and mayo on the side.')";
+			echo "Insert Statement: <code><pre>", htmlspecialchars($stmt81), "</pre></code><br/>\n";
+			$result = mysqli_query($connect, $stmt81);
 			if($result) { echo "Insert Successful\n<br/>";	}
 			else { echo "<strong>Insert Failure</strong>\n<br>/<br>/"; }
 			
-			$stmt67 = "INSERT INTO menu(name, type, price, description) VALUES ('Cheseeburger-Cheeseburger','Burgers',14,'The daddy of all ONE POUND Double Cheeseburgers! Served with American and provolone cheeses on a triple-decker bun. Substitute .75 lb Bison meat for an additional $3.')";
-			echo "Insert Statement: <code><pre>", htmlspecialchars($stmt67), "</pre></code><br/>\n";
-			$result = mysqli_query($connect, $stmt67);
+			$stmt82 = "INSERT INTO menu(name, type, price, description) VALUES ('Steakhouse Burger','Burgers',12,'Topped with cheddar cheese, homemade crispy onion straws, Applewood-smoked bacon, LTO, and our soon-to-be-famous A1 Aioli!')";
+			echo "Insert Statement: <code><pre>", htmlspecialchars($stmt82), "</pre></code><br/>\n";
+			$result = mysqli_query($connect, $stmt82);
 			if($result) { echo "Insert Successful\n<br/>";	}
 			else { echo "<strong>Insert Failure</strong>\n<br>/<br>/"; }
 			
-			$stmt67 = "INSERT INTO menu(name, type, price, description) VALUES ('No Name Burger','Burgers',11.5,'Stolen from the No Name Saloon in Park City, UT.Our Blacksburger topped with cream cheese and jalapenos and finished with our tangy chipotle sauce.')";
-			echo "Insert Statement: <code><pre>", htmlspecialchars($stmt67), "</pre></code><br/>\n";
-			$result = mysqli_query($connect, $stmt67);
+			$stmt83 = "INSERT INTO menu(name, type, price, description) VALUES ('Black and Bleu Burger','Burgers',11,'Our Blacksburger piled high with bleu cheese, lettuce, tomato and onion.')";
+			echo "Insert Statement: <code><pre>", htmlspecialchars($stmt83), "</pre></code><br/>\n";
+			$result = mysqli_query($connect, $stmt83);
 			if($result) { echo "Insert Successful\n<br/>";	}
 			else { echo "<strong>Insert Failure</strong>\n<br>/<br>/"; }
 			
-			$stmt67 = "INSERT INTO menu(name, type, price, description) VALUES ('Highlander Burger','Burgers',11.5,'Smothered in sweet and tangy Jamaican relish, habanero-jack cheese and jalapenos.')";
-			echo "Insert Statement: <code><pre>", htmlspecialchars($stmt67), "</pre></code><br/>\n";
-			$result = mysqli_query($connect, $stmt67);
+			$stmt84 = "INSERT INTO menu(name, type, price, description) VALUES ('California Burger','Burgers',12,'Our Blacksburger topped with avocado, bacon, Swiss, lettuce, tomato, onion and homemade ranch dressing.')";
+			echo "Insert Statement: <code><pre>", htmlspecialchars($stmt84), "</pre></code><br/>\n";
+			$result = mysqli_query($connect, $stmt84);
 			if($result) { echo "Insert Successful\n<br/>";	}
 			else { echo "<strong>Insert Failure</strong>\n<br>/<br>/"; }
 			
-			$stmt67 = "INSERT INTO menu(name, type, price, description) VALUES ('Crabby Patty Burger','Burgers',11.5,'Smothered in our famous Cajun Crab Dip, topped with cheddar/jack cheese.')";
-			echo "Insert Statement: <code><pre>", htmlspecialchars($stmt67), "</pre></code><br/>\n";
-			$result = mysqli_query($connect, $stmt67);
+			$stmt85 = "INSERT INTO menu(name, type, price, description) VALUES ('Tex-Mex Burger','Burgers',11.5,'Topped with our homemade chili, habanero-jack cheese, and jalapenos.')";
+			echo "Insert Statement: <code><pre>", htmlspecialchars($stmt85), "</pre></code><br/>\n";
+			$result = mysqli_query($connect, $stmt85);
 			if($result) { echo "Insert Successful\n<br/>";	}
 			else { echo "<strong>Insert Failure</strong>\n<br>/<br>/"; }
 			
-			$stmt67 = "INSERT INTO menu(name, type, price, description) VALUES ('Hawaiian Burger','Burgers',11.5,'Topped with? teriyaki sauce, 2 grilled pineapple rings and provolone cheese.')";
-			echo "Insert Statement: <code><pre>", htmlspecialchars($stmt67), "</pre></code><br/>\n";
-			$result = mysqli_query($connect, $stmt67);
+			$stmt86 = "INSERT INTO menu(name, type, price, description) VALUES ('Spin Dip Burger','Burgers',11.5,'Our Blacksburger topped with Spinach and Artichoke Dip, melted mozzarella, crushed red peppers, and L,T,O.')";
+			echo "Insert Statement: <code><pre>", htmlspecialchars($stmt86), "</pre></code><br/>\n";
+			$result = mysqli_query($connect, $stmt86);
 			if($result) { echo "Insert Successful\n<br/>";	}
 			else { echo "<strong>Insert Failure</strong>\n<br>/<br>/"; }
 			
-			$stmt67 = "INSERT INTO menu(name, type, price, description) VALUES ('Breakfast Burger','Burgers',12,'Topped with? a fried egg, American cheese and Applewood smoked bacon. Served on Texas toast.')";
-			echo "Insert Statement: <code><pre>", htmlspecialchars($stmt67), "</pre></code><br/>\n";
-			$result = mysqli_query($connect, $stmt67);
+			$stmt87 = "INSERT INTO menu(name, type, price, description) VALUES ('BBQ Burger','Burgers',11.5,'Topped with a beer-battered onion ring, original BBQ sauce, and cheddar cheese.')";
+			echo "Insert Statement: <code><pre>", htmlspecialchars($stmt87), "</pre></code><br/>\n";
+			$result = mysqli_query($connect, $stmt87);
 			if($result) { echo "Insert Successful\n<br/>";	}
 			else { echo "<strong>Insert Failure</strong>\n<br>/<br>/"; }
 			
-			$stmt67 = "INSERT INTO menu(name, type, price, description) VALUES ('Cheeseburger Sub','Burgers',12,'Our Blacksburger diced and grilled with sauteed mushrooms and onions, and loaded with American cheese. Served on a toasted sub roll.')";
-			echo "Insert Statement: <code><pre>", htmlspecialchars($stmt67), "</pre></code><br/>\n";
-			$result = mysqli_query($connect, $stmt67);
+			$stmt88 = "INSERT INTO menu(name, type, price, description) VALUES ('Patty Melt','Burgers',11,'Piled high with sauteed onions and provolone cheese. Served on Texas toast.')";
+			echo "Insert Statement: <code><pre>", htmlspecialchars($stmt88), "</pre></code><br/>\n";
+			$result = mysqli_query($connect, $stmt88);
 			if($result) { echo "Insert Successful\n<br/>";	}
 			else { echo "<strong>Insert Failure</strong>\n<br>/<br>/"; }
 			
-			$stmt67 = "INSERT INTO menu(name, type, price, description) VALUES ('Sauteed Mushroom, Onion and Swiss Burger','Burgers',11.5,'A classic! Add Applewood smoked bacon $1.50')";
-			echo "Insert Statement: <code><pre>", htmlspecialchars($stmt67), "</pre></code><br/>\n";
-			$result = mysqli_query($connect, $stmt67);
+			$stmt89 = "INSERT INTO menu(name, type, price, description) VALUES ('Cheseeburger-Cheeseburger','Burgers',14,'The daddy of all ONE POUND Double Cheeseburgers! Served with American and provolone cheeses on a triple-decker bun. Substitute .75 lb Bison meat for an additional $3.')";
+			echo "Insert Statement: <code><pre>", htmlspecialchars($stmt89), "</pre></code><br/>\n";
+			$result = mysqli_query($connect, $stmt89);
 			if($result) { echo "Insert Successful\n<br/>";	}
 			else { echo "<strong>Insert Failure</strong>\n<br>/<br>/"; }
 			
-			$stmt67 = "INSERT INTO menu(name, type, price, description) VALUES ('Gardenburger Veggie Patty','Burgers',10,'Flame-grilled and served on a toasted bun with lettuce, tomato, onion and mayo on the side.')";
-			echo "Insert Statement: <code><pre>", htmlspecialchars($stmt67), "</pre></code><br/>\n";
-			$result = mysqli_query($connect, $stmt67);
+			$stmt90 = "INSERT INTO menu(name, type, price, description) VALUES ('No Name Burger','Burgers',11.5,'Stolen from the No Name Saloon in Park City, UT.Our Blacksburger topped with cream cheese and jalapenos and finished with our tangy chipotle sauce.')";
+			echo "Insert Statement: <code><pre>", htmlspecialchars($stmt90), "</pre></code><br/>\n";
+			$result = mysqli_query($connect, $stmt90);
+			if($result) { echo "Insert Successful\n<br/>";	}
+			else { echo "<strong>Insert Failure</strong>\n<br>/<br>/"; }
+			
+			$stmt91 = "INSERT INTO menu(name, type, price, description) VALUES ('Highlander Burger','Burgers',11.5,'Smothered in sweet and tangy Jamaican relish, habanero-jack cheese and jalapenos.')";
+			echo "Insert Statement: <code><pre>", htmlspecialchars($stmt91), "</pre></code><br/>\n";
+			$result = mysqli_query($connect, $stmt91);
+			if($result) { echo "Insert Successful\n<br/>";	}
+			else { echo "<strong>Insert Failure</strong>\n<br>/<br>/"; }
+			
+			$stmt92 = "INSERT INTO menu(name, type, price, description) VALUES ('Crabby Patty Burger','Burgers',11.5,'Smothered in our famous Cajun Crab Dip, topped with cheddar/jack cheese.')";
+			echo "Insert Statement: <code><pre>", htmlspecialchars($stmt92), "</pre></code><br/>\n";
+			$result = mysqli_query($connect, $stmt92);
+			if($result) { echo "Insert Successful\n<br/>";	}
+			else { echo "<strong>Insert Failure</strong>\n<br>/<br>/"; }
+			
+			$stmt93 = "INSERT INTO menu(name, type, price, description) VALUES ('Hawaiian Burger','Burgers',11.5,'Topped with? teriyaki sauce, 2 grilled pineapple rings and provolone cheese.')";
+			echo "Insert Statement: <code><pre>", htmlspecialchars($stmt93), "</pre></code><br/>\n";
+			$result = mysqli_query($connect, $stmt93);
+			if($result) { echo "Insert Successful\n<br/>";	}
+			else { echo "<strong>Insert Failure</strong>\n<br>/<br>/"; }
+			
+			$stmt94 = "INSERT INTO menu(name, type, price, description) VALUES ('Breakfast Burger','Burgers',12,'Topped with? a fried egg, American cheese and Applewood smoked bacon. Served on Texas toast.')";
+			echo "Insert Statement: <code><pre>", htmlspecialchars($stmt94), "</pre></code><br/>\n";
+			$result = mysqli_query($connect, $stmt94);
+			if($result) { echo "Insert Successful\n<br/>";	}
+			else { echo "<strong>Insert Failure</strong>\n<br>/<br>/"; }
+			
+			$stmt95 = "INSERT INTO menu(name, type, price, description) VALUES ('Cheeseburger Sub','Burgers',12,'Our Blacksburger diced and grilled with sauteed mushrooms and onions, and loaded with American cheese. Served on a toasted sub roll.')";
+			echo "Insert Statement: <code><pre>", htmlspecialchars($stmt95), "</pre></code><br/>\n";
+			$result = mysqli_query($connect, $stmt95);
+			if($result) { echo "Insert Successful\n<br/>";	}
+			else { echo "<strong>Insert Failure</strong>\n<br>/<br>/"; }
+			
+			$stmt96 = "INSERT INTO menu(name, type, price, description) VALUES ('Sauteed Mushroom, Onion and Swiss Burger','Burgers',11.5,'A classic! Add Applewood smoked bacon $1.50')";
+			echo "Insert Statement: <code><pre>", htmlspecialchars($stmt96), "</pre></code><br/>\n";
+			$result = mysqli_query($connect, $stmt96;
+			if($result) { echo "Insert Successful\n<br/>";	}
+			else { echo "<strong>Insert Failure</strong>\n<br>/<br>/"; }
+			
+			$stmt97 = "INSERT INTO menu(name, type, price, description) VALUES ('Gardenburger Veggie Patty','Burgers',10,'Flame-grilled and served on a toasted bun with lettuce, tomato, onion and mayo on the side.')";
+			echo "Insert Statement: <code><pre>", htmlspecialchars($stmt97), "</pre></code><br/>\n";
+			$result = mysqli_query($connect, $stmt97);
 			if($result) { echo "Insert Successful\n<br/>";	}
 			
 			///////////////////////////////////////////////////////////////////////////////////////
 			
-			$stmt67 = "INSERT INTO menu(name, type, price, description) VALUES ('Bison Cheeseburger Wrap,'Wraps',12,'Organic bison meat diced and cooked with sauteed mushrooms and onions, and finished with American and cheddar/jack cheeses, lettuce and tomato.')";
-			echo "Insert Statement: <code><pre>", htmlspecialchars($stmt67), "</pre></code><br/>\n";
-			$result = mysqli_query($connect, $stmt67);
+			$stmt98 = "INSERT INTO menu(name, type, price, description) VALUES ('Bison Cheeseburger Wrap,'Wraps',12,'Organic bison meat diced and cooked with sauteed mushrooms and onions, and finished with American and cheddar/jack cheeses, lettuce and tomato.')";
+			echo "Insert Statement: <code><pre>", htmlspecialchars($stmt98), "</pre></code><br/>\n";
+			$result = mysqli_query($connect, $stmt98);
 			if($result) { echo "Insert Successful\n<br/>";	}
 			
-			$stmt67 = "INSERT INTO menu(name, type, price, description) VALUES ('Philly Cheese Steak Wrap','Wraps',12,'Marinated and? grilled steak with fresh mushrooms, onions and green peppers, white American cheese, lettuce and tomato.')";
-			echo "Insert Statement: <code><pre>", htmlspecialchars($stmt67), "</pre></code><br/>\n";
-			$result = mysqli_query($connect, $stmt67);
+			$stmt99 = "INSERT INTO menu(name, type, price, description) VALUES ('Philly Cheese Steak Wrap','Wraps',12,'Marinated and? grilled steak with fresh mushrooms, onions and green peppers, white American cheese, lettuce and tomato.')";
+			echo "Insert Statement: <code><pre>", htmlspecialchars($stmt99), "</pre></code><br/>\n";
+			$result = mysqli_query($connect, $stmt99);
 			if($result) { echo "Insert Successful\n<br/>";	}
 			
-			$stmt67 = "INSERT INTO menu(name, type, price, description) VALUES ('Chicken Avocado Dip Wrap','Wraps',11,'Grilled chicken, homemade Creamy Avocado Dip, crisp Applewood smoked bacon, lettuce, tomato, onion, jack/cheddar cheeses and homemade ranch dressing.')";
-			echo "Insert Statement: <code><pre>", htmlspecialchars($stmt67), "</pre></code><br/>\n";
-			$result = mysqli_query($connect, $stmt67);
+			$stmt100 = "INSERT INTO menu(name, type, price, description) VALUES ('Chicken Avocado Dip Wrap','Wraps',11,'Grilled chicken, homemade Creamy Avocado Dip, crisp Applewood smoked bacon, lettuce, tomato, onion, jack/cheddar cheeses and homemade ranch dressing.')";
+			echo "Insert Statement: <code><pre>", htmlspecialchars($stmt100), "</pre></code><br/>\n";
+			$result = mysqli_query($connect, $stmt100);
 			if($result) { echo "Insert Successful\n<br/>";	}
 			
-			$stmt67 = "INSERT INTO menu(name, type, price, description) VALUES ('Surf and Turf Wrap','Wraps',13,'Loaded with? grilled steak and grilled buffalo shrimp, lettuce, tomato, and finished with chipotle sauce.')";
-			echo "Insert Statement: <code><pre>", htmlspecialchars($stmt67), "</pre></code><br/>\n";
-			$result = mysqli_query($connect, $stmt67);
+			$stmt101 = "INSERT INTO menu(name, type, price, description) VALUES ('Surf and Turf Wrap','Wraps',13,'Loaded with? grilled steak and grilled buffalo shrimp, lettuce, tomato, and finished with chipotle sauce.')";
+			echo "Insert Statement: <code><pre>", htmlspecialchars($stmt101), "</pre></code><br/>\n";
+			$result = mysqli_query($connect, $stmt101);
 			if($result) { echo "Insert Successful\n<br/>";	}
 			
-			$stmt67 = "INSERT INTO menu(name, type, price, description) VALUES ('Pineapple Express Wrap','Wraps',10,'Stuffed with grilled buffalo shrimp, grilled pineapple, teriyaki sauce and provolone cheese.')";
-			echo "Insert Statement: <code><pre>", htmlspecialchars($stmt67), "</pre></code><br/>\n";
-			$result = mysqli_query($connect, $stmt67);
+			$stmt102 = "INSERT INTO menu(name, type, price, description) VALUES ('Pineapple Express Wrap','Wraps',10,'Stuffed with grilled buffalo shrimp, grilled pineapple, teriyaki sauce and provolone cheese.')";
+			echo "Insert Statement: <code><pre>", htmlspecialchars($stmt102), "</pre></code><br/>\n";
+			$result = mysqli_query($connect, $stmt102);
 			if($result) { echo "Insert Successful\n<br/>";	}
 			
-			$stmt67 = "INSERT INTO menu(name, type, price, description) VALUES ('Deli Club Wrap','Wraps',10,'Honey-baked ham and smoked turkey, crisp Applewood smoked bacon, cheddar/jack cheese, lettuce, tomato, onion, and chipotle sauce.')";
-			echo "Insert Statement: <code><pre>", htmlspecialchars($stmt67), "</pre></code><br/>\n";
-			$result = mysqli_query($connect, $stmt67);
+			$stmt103 = "INSERT INTO menu(name, type, price, description) VALUES ('Deli Club Wrap','Wraps',10,'Honey-baked ham and smoked turkey, crisp Applewood smoked bacon, cheddar/jack cheese, lettuce, tomato, onion, and chipotle sauce.')";
+			echo "Insert Statement: <code><pre>", htmlspecialchars($stmt103), "</pre></code><br/>\n";
+			$result = mysqli_query($connect, $stmt103);
 			if($result) { echo "Insert Successful\n<br/>";	}
 			
-			$stmt67 = "INSERT INTO menu(name, type, price, description) VALUES ('California Turkey Wrap','Wraps',11,'Smoked turkey, crisp Applewood smoked bacon, avocado, lettuce, tomato, onion, jack/cheddar cheeses and homemade ranch dressing.')";
-			echo "Insert Statement: <code><pre>", htmlspecialchars($stmt67), "</pre></code><br/>\n";
-			$result = mysqli_query($connect, $stmt67);
+			$stmt104 = "INSERT INTO menu(name, type, price, description) VALUES ('California Turkey Wrap','Wraps',11,'Smoked turkey, crisp Applewood smoked bacon, avocado, lettuce, tomato, onion, jack/cheddar cheeses and homemade ranch dressing.')";
+			echo "Insert Statement: <code><pre>", htmlspecialchars($stmt104), "</pre></code><br/>\n";
+			$result = mysqli_query($connect, $stmt104);
 			if($result) { echo "Insert Successful\n<br/>";	}
 			
-			$stmt67 = "INSERT INTO menu(name, type, price, description) VALUES ('Chicken Wing Wrap','Wraps',10,'Breaded or grilled chicken tenders, diced and tossed in your choice of wing sauce, and served with lettuce, tomato, onion, and jack and cheddar cheeses.')";
-			echo "Insert Statement: <code><pre>", htmlspecialchars($stmt67), "</pre></code><br/>\n";
-			$result = mysqli_query($connect, $stmt67);
+			$stmt105 = "INSERT INTO menu(name, type, price, description) VALUES ('Chicken Wing Wrap','Wraps',10,'Breaded or grilled chicken tenders, diced and tossed in your choice of wing sauce, and served with lettuce, tomato, onion, and jack and cheddar cheeses.')";
+			echo "Insert Statement: <code><pre>", htmlspecialchars($stmt105), "</pre></code><br/>\n";
+			$result = mysqli_query($connect, $stmt105);
 			if($result) { echo "Insert Successful\n<br/>";	}
 			
-			$stmt67 = "INSERT INTO menu(name, type, price, description) VALUES ('Chicken Caesar Wrap','Wraps',10,'Crisp romaine lettuce tossed in Caesar dressing and freshly grated Parmesan, rolled up with diced zesty chicken breast.')";
-			echo "Insert Statement: <code><pre>", htmlspecialchars($stmt67), "</pre></code><br/>\n";
-			$result = mysqli_query($connect, $stmt67);
+			$stmt106 = "INSERT INTO menu(name, type, price, description) VALUES ('Chicken Caesar Wrap','Wraps',10,'Crisp romaine lettuce tossed in Caesar dressing and freshly grated Parmesan, rolled up with diced zesty chicken breast.')";
+			echo "Insert Statement: <code><pre>", htmlspecialchars($stmt106), "</pre></code><br/>\n";
+			$result = mysqli_query($connect, $stmt106);
 			if($result) { echo "Insert Successful\n<br/>";	}
 			
-			$stmt67 = "INSERT INTO menu(name, type, price, description) VALUES ('Shrimp Caesar Wrap','Wraps',12,'Crisp romaine lettuce tossed in Caesar dressing and freshly grated Parmesan, rolled up with grilled zesty shrimp.')";
-			echo "Insert Statement: <code><pre>", htmlspecialchars($stmt67), "</pre></code><br/>\n";
-			$result = mysqli_query($connect, $stmt67);
+			$stmt107 = "INSERT INTO menu(name, type, price, description) VALUES ('Shrimp Caesar Wrap','Wraps',12,'Crisp romaine lettuce tossed in Caesar dressing and freshly grated Parmesan, rolled up with grilled zesty shrimp.')";
+			echo "Insert Statement: <code><pre>", htmlspecialchars($stmt107), "</pre></code><br/>\n";
+			$result = mysqli_query($connect, $stmt107);
 			if($result) { echo "Insert Successful\n<br/>";	}
 			
-			$stmt67 = "INSERT INTO menu(name, type, price, description) VALUES ('Veggie Wrap','Wraps',10,'Melted swiss and provolone with shredded lettuce, tomatoes, onions, green peppers, avocados, carrots, mushrooms, and mild banana peppers, topped with homemade ranch dressing.')";
-			echo "Insert Statement: <code><pre>", htmlspecialchars($stmt67), "</pre></code><br/>\n";
-			$result = mysqli_query($connect, $stmt67);
-			if($result) { echo "Insert Successful\n<br/>";	}
-			
-			///////////////////////////////////////////////////////////////////////////////////////
-			
-			$stmt67 = "INSERT INTO menu(name, type, price, description) VALUES ('Seasoned Fries','Side',null,'Not Applicable')";
-			echo "Insert Statement: <code><pre>", htmlspecialchars($stmt67), "</pre></code><br/>\n";
-			$result = mysqli_query($connect, $stmt67);
-			if($result) { echo "Insert Successful\n<br/>";	}
-			
-			$stmt67 = "INSERT INTO menu(name, type, price, description) VALUES ('Waffle Fries','Side',null,'Not Applicable')";
-			echo "Insert Statement: <code><pre>", htmlspecialchars($stmt67), "</pre></code><br/>\n";
-			$result = mysqli_query($connect, $stmt67);
-			if($result) { echo "Insert Successful\n<br/>";	}
-			
-			$stmt67 = "INSERT INTO menu(name, type, price, description) VALUES ('Tater Tots','Side',null,'Not Applicable')";
-			echo "Insert Statement: <code><pre>", htmlspecialchars($stmt67), "</pre></code><br/>\n";
-			$result = mysqli_query($connect, $stmt67);
-			if($result) { echo "Insert Successful\n<br/>";	}
-			
-			$stmt67 = "INSERT INTO menu(name, type, price, description) VALUES ('Baked Potato','Side',null,'Not Applicable')";
-			echo "Insert Statement: <code><pre>", htmlspecialchars($stmt67), "</pre></code><br/>\n";
-			$result = mysqli_query($connect, $stmt67);
-			if($result) { echo "Insert Successful\n<br/>";	}
-			
-			$stmt67 = "INSERT INTO menu(name, type, price, description) VALUES ('Homemade Coleslaw','Side',null,'Not Applicable')";
-			echo "Insert Statement: <code><pre>", htmlspecialchars($stmt67), "</pre></code><br/>\n";
-			$result = mysqli_query($connect, $stmt67);
-			if($result) { echo "Insert Successful\n<br/>";	}
-			
-			$stmt67 = "INSERT INTO menu(name, type, price, description) VALUES ('Steamed Mixed Veggies','Side',null,'Not Applicable')";
-			echo "Insert Statement: <code><pre>", htmlspecialchars($stmt67), "</pre></code><br/>\n";
-			$result = mysqli_query($connect, $stmt67);
-			if($result) { echo "Insert Successful\n<br/>";	}
-			
-			$stmt67 = "INSERT INTO menu(name, type, price, description) VALUES ('Steamed Broccoli','Side',null,'Not Applicable')";
-			echo "Insert Statement: <code><pre>", htmlspecialchars($stmt67), "</pre></code><br/>\n";
-			$result = mysqli_query($connect, $stmt67);
+			$stmt108 = "INSERT INTO menu(name, type, price, description) VALUES ('Veggie Wrap','Wraps',10,'Melted swiss and provolone with shredded lettuce, tomatoes, onions, green peppers, avocados, carrots, mushrooms, and mild banana peppers, topped with homemade ranch dressing.')";
+			echo "Insert Statement: <code><pre>", htmlspecialchars($stmt108), "</pre></code><br/>\n";
+			$result = mysqli_query($connect, $stmt108);
 			if($result) { echo "Insert Successful\n<br/>";	}
 			
 			///////////////////////////////////////////////////////////////////////////////////////
 			
-			$stmt67 = "INSERT INTO menu(name, type, price, description) VALUES ('Coke','Beverages',2.5,'Not Applicable')";
-			echo "Insert Statement: <code><pre>", htmlspecialchars($stmt67), "</pre></code><br/>\n";
-			$result = mysqli_query($connect, $stmt67);
+			$stmt109 = "INSERT INTO menu(name, type, price, description) VALUES ('Seasoned Fries','Side',null,'Not Applicable')";
+			echo "Insert Statement: <code><pre>", htmlspecialchars($stmt109), "</pre></code><br/>\n";
+			$result = mysqli_query($connect, $stmt109);
 			if($result) { echo "Insert Successful\n<br/>";	}
 			
-			$stmt67 = "INSERT INTO menu(name, type, price, description) VALUES ('Diet Coke','Beverages',2.5,'Not Applicable')";
-			echo "Insert Statement: <code><pre>", htmlspecialchars($stmt67), "</pre></code><br/>\n";
-			$result = mysqli_query($connect, $stmt67);
+			$stmt110 = "INSERT INTO menu(name, type, price, description) VALUES ('Waffle Fries','Side',null,'Not Applicable')";
+			echo "Insert Statement: <code><pre>", htmlspecialchars($stm110), "</pre></code><br/>\n";
+			$result = mysqli_query($connect, $stmt110);
 			if($result) { echo "Insert Successful\n<br/>";	}
 			
-			$stmt67 = "INSERT INTO menu(name, type, price, description) VALUES ('Sprite','Beverages',2.5,'Not Applicable')";
-			echo "Insert Statement: <code><pre>", htmlspecialchars($stmt67), "</pre></code><br/>\n";
-			$result = mysqli_query($connect, $stmt67);
+			$stmt111 = "INSERT INTO menu(name, type, price, description) VALUES ('Tater Tots','Side',null,'Not Applicable')";
+			echo "Insert Statement: <code><pre>", htmlspecialchars($stmt111), "</pre></code><br/>\n";
+			$result = mysqli_query($connect, $stmt111);
 			if($result) { echo "Insert Successful\n<br/>";	}
 			
-			$stmt67 = "INSERT INTO menu(name, type, price, description) VALUES ('Mello Yello','Beverages',2.5,'Not Applicable')";
-			echo "Insert Statement: <code><pre>", htmlspecialchars($stmt67), "</pre></code><br/>\n";
-			$result = mysqli_query($connect, $stmt67);
+			$stmt112 = "INSERT INTO menu(name, type, price, description) VALUES ('Baked Potato','Side',null,'Not Applicable')";
+			echo "Insert Statement: <code><pre>", htmlspecialchars($stmt112), "</pre></code><br/>\n";
+			$result = mysqli_query($connect, $stmt112);
 			if($result) { echo "Insert Successful\n<br/>";	}
 			
-			$stmt67 = "INSERT INTO menu(name, type, price, description) VALUES ('Dr. Pepper','Beverages',2.5,'Not Applicable')";
-			echo "Insert Statement: <code><pre>", htmlspecialchars($stmt67), "</pre></code><br/>\n";
-			$result = mysqli_query($connect, $stmt67);
+			$stmt113 = "INSERT INTO menu(name, type, price, description) VALUES ('Homemade Coleslaw','Side',null,'Not Applicable')";
+			echo "Insert Statement: <code><pre>", htmlspecialchars($stmt113), "</pre></code><br/>\n";
+			$result = mysqli_query($connect, $stmt113);
 			if($result) { echo "Insert Successful\n<br/>";	}
 			
-			$stmt67 = "INSERT INTO menu(name, type, price, description) VALUES ('Root Beer','Beverages',2.5,'Not Applicable')";
-			echo "Insert Statement: <code><pre>", htmlspecialchars($stmt67), "</pre></code><br/>\n";
-			$result = mysqli_query($connect, $stmt67);
+			$stmt114 = "INSERT INTO menu(name, type, price, description) VALUES ('Steamed Mixed Veggies','Side',null,'Not Applicable')";
+			echo "Insert Statement: <code><pre>", htmlspecialchars($stmt114), "</pre></code><br/>\n";
+			$result = mysqli_query($connect, $stmt114);
 			if($result) { echo "Insert Successful\n<br/>";	}
 			
-			$stmt67 = "INSERT INTO menu(name, type, price, description) VALUES ('Ginger Ale','Beverages',2.5,'Not Applicable')";
-			echo "Insert Statement: <code><pre>", htmlspecialchars($stmt67), "</pre></code><br/>\n";
-			$result = mysqli_query($connect, $stmt67);
+			$stmt115 = "INSERT INTO menu(name, type, price, description) VALUES ('Steamed Broccoli','Side',null,'Not Applicable')";
+			echo "Insert Statement: <code><pre>", htmlspecialchars($stmt115), "</pre></code><br/>\n";
+			$result = mysqli_query($connect, $stmt115);
 			if($result) { echo "Insert Successful\n<br/>";	}
 			
-			$stmt67 = "INSERT INTO menu(name, type, price, description) VALUES ('Powerade','Beverages',2.5,'Not Applicable')";
-			echo "Insert Statement: <code><pre>", htmlspecialchars($stmt67), "</pre></code><br/>\n";
-			$result = mysqli_query($connect, $stmt67);
+			///////////////////////////////////////////////////////////////////////////////////////
+			
+			$stmt116 = "INSERT INTO menu(name, type, price, description) VALUES ('Coke','Beverages',2.5,'Not Applicable')";
+			echo "Insert Statement: <code><pre>", htmlspecialchars($stmt116), "</pre></code><br/>\n";
+			$result = mysqli_query($connect, $stmt116);
 			if($result) { echo "Insert Successful\n<br/>";	}
 			
-			$stmt67 = "INSERT INTO menu(name, type, price, description) VALUES ('Pink Lemonade','Beverages',2.5,'Not Applicable')";
-			echo "Insert Statement: <code><pre>", htmlspecialchars($stmt67), "</pre></code><br/>\n";
-			$result = mysqli_query($connect, $stmt67);
+			$stmt117 = "INSERT INTO menu(name, type, price, description) VALUES ('Diet Coke','Beverages',2.5,'Not Applicable')";
+			echo "Insert Statement: <code><pre>", htmlspecialchars($stmt1117), "</pre></code><br/>\n";
+			$result = mysqli_query($connect, $stmt117);
 			if($result) { echo "Insert Successful\n<br/>";	}
 			
-			$stmt67 = "INSERT INTO menu(name, type, price, description) VALUES ('Iced Tea','Beverages',2.5,'Not Applicable')";
-			echo "Insert Statement: <code><pre>", htmlspecialchars($stmt67), "</pre></code><br/>\n";
-			$result = mysqli_query($connect, $stmt67);
+			$stmt118 = "INSERT INTO menu(name, type, price, description) VALUES ('Sprite','Beverages',2.5,'Not Applicable')";
+			echo "Insert Statement: <code><pre>", htmlspecialchars($stmt118), "</pre></code><br/>\n";
+			$result = mysqli_query($connect, $stmt118);
 			if($result) { echo "Insert Successful\n<br/>";	}
 			
-			$stmt67 = "INSERT INTO menu(name, type, price, description) VALUES ('2% Milk','Beverages',2.25,'Not Applicable')";
-			echo "Insert Statement: <code><pre>", htmlspecialchars($stmt67), "</pre></code><br/>\n";
-			$result = mysqli_query($connect, $stmt67);
+			$stmt119 = "INSERT INTO menu(name, type, price, description) VALUES ('Mello Yello','Beverages',2.5,'Not Applicable')";
+			echo "Insert Statement: <code><pre>", htmlspecialchars($stmt119), "</pre></code><br/>\n";
+			$result = mysqli_query($connect, $stmt119);
 			if($result) { echo "Insert Successful\n<br/>";	}
 			
-			$stmt67 = "INSERT INTO menu(name, type, price, description) VALUES ('Orange Juice','Beverages',2.25,'Not Applicable')";
-			echo "Insert Statement: <code><pre>", htmlspecialchars($stmt67), "</pre></code><br/>\n";
-			$result = mysqli_query($connect, $stmt67);
+			$stmt120 = "INSERT INTO menu(name, type, price, description) VALUES ('Dr. Pepper','Beverages',2.5,'Not Applicable')";
+			echo "Insert Statement: <code><pre>", htmlspecialchars($stmt120), "</pre></code><br/>\n";
+			$result = mysqli_query($connect, $stmt120);
 			if($result) { echo "Insert Successful\n<br/>";	}
 			
-			$stmt67 = "INSERT INTO menu(name, type, price, description) VALUES ('Cranberry Juice','Beverages',2.25,'Not Applicable')";
-			echo "Insert Statement: <code><pre>", htmlspecialchars($stmt67), "</pre></code><br/>\n";
-			$result = mysqli_query($connect, $stmt67);
+			$stmt121 = "INSERT INTO menu(name, type, price, description) VALUES ('Root Beer','Beverages',2.5,'Not Applicable')";
+			echo "Insert Statement: <code><pre>", htmlspecialchars($stmt121), "</pre></code><br/>\n";
+			$result = mysqli_query($connect, $stmt121);
 			if($result) { echo "Insert Successful\n<br/>";	}
 			
-			$stmt67 = "INSERT INTO menu(name, type, price, description) VALUES ('Pineapple Juice','Beverages',2.25,'Not Applicable')";
-			echo "Insert Statement: <code><pre>", htmlspecialchars($stmt67), "</pre></code><br/>\n";
-			$result = mysqli_query($connect, $stmt67);
+			$stmt122 = "INSERT INTO menu(name, type, price, description) VALUES ('Ginger Ale','Beverages',2.5,'Not Applicable')";
+			echo "Insert Statement: <code><pre>", htmlspecialchars($stmt122), "</pre></code><br/>\n";
+			$result = mysqli_query($connect, $stmt122);
 			if($result) { echo "Insert Successful\n<br/>";	}
 			
-			$stmt67 = "INSERT INTO menu(name, type, price, description) VALUES ('Coffee','Beverages',2.25,'Not Applicable')";
-			echo "Insert Statement: <code><pre>", htmlspecialchars($stmt67), "</pre></code><br/>\n";
-			$result = mysqli_query($connect, $stmt67);
+			$stmt123 = "INSERT INTO menu(name, type, price, description) VALUES ('Powerade','Beverages',2.5,'Not Applicable')";
+			echo "Insert Statement: <code><pre>", htmlspecialchars($stmt123), "</pre></code><br/>\n";
+			$result = mysqli_query($connect, $stmt123);
 			if($result) { echo "Insert Successful\n<br/>";	}
 			
-			$stmt67 = "INSERT INTO menu(name, type, price, description) VALUES ('Hot Chocolate','Beverages',2.25,'Not Applicable')";
-			echo "Insert Statement: <code><pre>", htmlspecialchars($stmt67), "</pre></code><br/>\n";
-			$result = mysqli_query($connect, $stmt67);
+			$stmt124 = "INSERT INTO menu(name, type, price, description) VALUES ('Pink Lemonade','Beverages',2.5,'Not Applicable')";
+			echo "Insert Statement: <code><pre>", htmlspecialchars($stmt124), "</pre></code><br/>\n";
+			$result = mysqli_query($connect, $stmt124);
+			if($result) { echo "Insert Successful\n<br/>";	}
+			
+			$stmt125 = "INSERT INTO menu(name, type, price, description) VALUES ('Iced Tea','Beverages',2.5,'Not Applicable')";
+			echo "Insert Statement: <code><pre>", htmlspecialchars($stmt125), "</pre></code><br/>\n";
+			$result = mysqli_query($connect, $stmt125);
+			if($result) { echo "Insert Successful\n<br/>";	}
+			
+			$stmt126 = "INSERT INTO menu(name, type, price, description) VALUES ('2% Milk','Beverages',2.25,'Not Applicable')";
+			echo "Insert Statement: <code><pre>", htmlspecialchars($stmt126), "</pre></code><br/>\n";
+			$result = mysqli_query($connect, $stmt126);
+			if($result) { echo "Insert Successful\n<br/>";	}
+			
+			$stmt127 = "INSERT INTO menu(name, type, price, description) VALUES ('Orange Juice','Beverages',2.25,'Not Applicable')";
+			echo "Insert Statement: <code><pre>", htmlspecialchars($stmt127), "</pre></code><br/>\n";
+			$result = mysqli_query($connect, $stmt127);
+			if($result) { echo "Insert Successful\n<br/>";	}
+			
+			$stmt128 = "INSERT INTO menu(name, type, price, description) VALUES ('Cranberry Juice','Beverages',2.25,'Not Applicable')";
+			echo "Insert Statement: <code><pre>", htmlspecialchars($stmt128), "</pre></code><br/>\n";
+			$result = mysqli_query($connect, $stmt128);
+			if($result) { echo "Insert Successful\n<br/>";	}
+			
+			$stmt129 = "INSERT INTO menu(name, type, price, description) VALUES ('Pineapple Juice','Beverages',2.25,'Not Applicable')";
+			echo "Insert Statement: <code><pre>", htmlspecialchars($stmt129), "</pre></code><br/>\n";
+			$result = mysqli_query($connect, $stmt129);
+			if($result) { echo "Insert Successful\n<br/>";	}
+			
+			$stmt130 = "INSERT INTO menu(name, type, price, description) VALUES ('Coffee','Beverages',2.25,'Not Applicable')";
+			echo "Insert Statement: <code><pre>", htmlspecialchars($stmt130), "</pre></code><br/>\n";
+			$result = mysqli_query($connect, $stmt130);
+			if($result) { echo "Insert Successful\n<br/>";	}
+			
+			$stmt131 = "INSERT INTO menu(name, type, price, description) VALUES ('Hot Chocolate','Beverages',2.25,'Not Applicable')";
+			echo "Insert Statement: <code><pre>", htmlspecialchars($stmt131), "</pre></code><br/>\n";
+			$result = mysqli_query($connect, $stmt131);
 			if($result) { echo "Insert Successful\n<br/>";	}
 		?>
 		
