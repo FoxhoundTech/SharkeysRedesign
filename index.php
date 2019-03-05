@@ -11,11 +11,6 @@
 			<div class='header'>
 				<img src='http://nebula.wsimg.com/f7e261adb16376df07825ca79d49b2ca?AccessKeyId=3AF9510BFFDF9C352E2C&disposition=0&alloworigin=1'/>
 				<h1>Sharkey's Wing and Rib Joint!</h1>
-				
-				<div class='slideshow'>
-					<div class='sharkeySlide'></div>
-				</div>
-				
 			</div>
 			
 			<div class='welcome'>

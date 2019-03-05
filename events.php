@@ -43,7 +43,7 @@
 				Free pool all day every Thursday!</p>
 			</div>
 			
-			<div class="calendar">
+			<div id="calendar">
 			</div>
 			
 			<div class='event-app'>
