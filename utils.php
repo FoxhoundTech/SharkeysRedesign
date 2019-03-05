@@ -46,10 +46,11 @@
 	
 	//editTable: string, int, string -> table row
 	//purpose: given a $header, $title, $price, and $description generates the html to create a table  row
-	function editTable( $header, $title, $price, $description ) {
+	function editTable( $header, $title, $type, $price, $description ) {
 		return "<tr>
 					<th scope=\"row\">$header</th>
 					<td>$title</td>
+					<td>$type</td>
 					<td>$$price</td>
 					<td>$description</td>
 					<td><a href=\"edit-food.php?name=$title\" class=\"btn btn-primary\">Edit</a></td>

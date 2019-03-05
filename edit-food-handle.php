@@ -23,25 +23,84 @@
 		<link rel="stylesheet" type="text/css" href="sharkeys.css">
 	</head>
 	<body>
-		<?php 
-			require_once("navbar.php"); 
+		<?php require_once("navbar.php"); 
 			
 			$aName = mysqli_real_escape_string($connect, $_POST['name']);
 			$aCategory = mysqli_real_escape_string($connect, $_POST['category']);
 			$aPrice = mysqli_real_escape_string($connect, $_POST['price']);
 			$aDesc = mysqli_real_escape_string($connect, $_POST['description']);
 			
-			$sqlStmt = "UPDATE menu set name='$aName', type='$aCategory', price=$aPrice, description='$aDesc' where name='$aName'";
+			$sqlStmt = "UPDATE menu set type='$aCategory', price=$aPrice, description='$aDesc' where name='$aName'";
 			$result = mysqli_query($connect,$sqlStmt);
 			if($result) { ?>
-				<h1 style="color: white">SUCESS</h1><?php
-			}		
-		?>
+				
+				<div class="pt-5 pb-5"></div>
+				<div class="row pt-5">
+					<div class="card col-md-6 mx-auto shadow">
+						<div class="card-header"><strong>Select menu item to edit:</strong></div>
+						<div class="card-body" style="height: 50em; overflow-y: scroll">
+							<table class="table table-hover">
+								<thead>
+									<tr>
+										<th scope="col"></th>
+										<th scope="col">Name:</th>
+										<th scope="col">Type:</th>
+										<th scope="col">Price:</th>
+										<th scope="col">Description:</th>
+										<th scope="col">Edit Item:</th>
+									</tr>
+								</thead>
+								<tbody>
+									<?php						
+										$SQLcmd = "SELECT * FROM menu";
+										$results = mysqli_query($connect,$SQLcmd);
+										
+										$i = 1;
+										while ($row=mysqli_fetch_assoc($results)) {
+											echo editTable( $i, $row['name'], $row['type'], $row['price'], $row['description'] );
+											$i++;
+										}
+										mysqli_close($connect);
+									?>
+								<tbody>
+							</table>
+						</div>
+					</div>
+					
+					<div class="card col-md-3 mx-auto shadow">
+						<div class="card-header"><strong>Add new item to menu:</strong></div>
+						<div class="card-body">
+							<form action='menu-modify-handle.php' method='post'>
+								<div class="form-group">
+									<label for="name">Name:</label>
+									<input type="text" class="form-control" id="name" placeholder="Enter name">
+									<label for="category">Category:</label>
+									<select class="form-control" id="category">
+										<option>Select Category</option>
+										<?php 
+											foreach( $foodAllowed AS $value ) {
+												echo "<option>$value</option>";
+											}
+										?>
+									</select>
+									<label for="price">Price:</label>
+									<input type="number" class="form-control" id="price" placeholder="Enter price" min="0" step="0.01">
+									<label for="description">Description</label>
+									<textarea class="form-control" id="description" rows="3"></textarea>	
+									<input class="form-control btn btn-primary" type="submit">
+								</div>
+							</form>
+							<div class="alert alert-success" role="alert">Item Updated Successfully</div>
+						</div>
+					</div>
+				</div> <?php
+			}	
+			else {
+			?><h1>FAILED TO UPDATE</h1><?php } ?>
 		
 		
 		
 		<?php 
-			}
 			mysqli_close($connect); 
 		?>
 		

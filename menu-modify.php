@@ -35,7 +35,8 @@
 						<thead>
 							<tr>
 								<th scope="col"></th>
-								<th scope="col">Name:</th>
+								<th scope="col">Name:</th>								
+								<th scope="col">Type:</th>
 								<th scope="col">Price:</th>
 								<th scope="col">Description:</th>
 								<th scope="col">Edit Item:</th>
@@ -48,7 +49,7 @@
 								
 								$i = 1;
 								while ($row=mysqli_fetch_assoc($results)) {
-									echo editTable( $i, $row['name'], $row['price'], $row['description'] );
+									echo editTable( $i, $row['name'], $row['type'], $row['price'], $row['description'] );
 									$i++;
 								}
 								mysqli_close($connect);

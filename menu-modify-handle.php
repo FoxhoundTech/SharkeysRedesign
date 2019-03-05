@@ -28,7 +28,7 @@
 			require_once("navbar.php"); 
 			
 			$name = mysqli_real_escape_string($connect, $_POST['name']);
-			$type = mysqli_real_escape_string($connect, $_POST['type']);
+			$type = mysqli_real_escape_string($connect, $_POST['category']);
 			$price = mysqli_real_escape_string($connect, $_POST['price']);
 			$description = mysqli_real_escape_string($connect, $_POST['description']);
 					
@@ -46,7 +46,8 @@
 						<thead>
 							<tr>
 								<th scope="col"></th>
-								<th scope="col">Name:</th>
+								<th scope="col">Name:</th>								
+								<th scope="col">Type:</th>
 								<th scope="col">Price:</th>
 								<th scope="col">Description:</th>
 								<th scope="col">Edit Item:</th>
@@ -59,7 +60,7 @@
 								
 								$i = 1;
 								while ($row=mysqli_fetch_assoc($results)) {
-									echo editTable( $i, $row['name'], $row['price'], $row['description'] );
+									echo editTable( $i, $row['name'], $row['type'], $row['price'], $row['description'] );
 									$i++;
 								}
 								mysqli_close($connect);
@@ -97,7 +98,7 @@
 							?><div class="alert alert-success" role="alert">Item Added Successfully</div><?php
 						}
 						else if ($sucess !== true) {
-							?><div class="alert alert-danger" role="alert">This is a danger alert—check it out!</div><?php
+							?><div class="alert alert-danger" role="alert">Item Failed to Add</div><?php
 						}
 					?>
 				</div>
