@@ -22,7 +22,7 @@
 			<a id='location' href="#locations">Locations</a>
 			<a id='events' href="events.php">Events</a>
 			<a id='special' href="#specials">Specials</a>
-			<a id='drink' href="#drinks">Drinks</a>
+			<a id='drink' href="drink-menu.php">Drinks</a>
 			<a id='admin' href="admin.php">Admin</a>
 			<a id='menu' href="menu.php">Menu</a>
 			<a id='home' href="index.php">Home</a>

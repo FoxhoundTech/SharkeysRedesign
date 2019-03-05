@@ -23,7 +23,7 @@
 		<?php
 			require_once("navbar.php"); 
 			require_once("se_db_password.php"); 
-			$connect = mysqli_connect("localhost", "jkolts", $mysql_password, "jkolts");
+			$connect = mysqli_connect("localhost", "jsimmons49", $mysql_password, "jsimmons49");
 
 			if (mysqli_connect_error()) { echo "Error details: ", mysqli_connect_error(), "\n"; }
 			

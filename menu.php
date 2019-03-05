@@ -1,7 +1,7 @@
 <?php 
 	require_once("se_db_password.php"); 
 	require_once("utils.php");
-	$connect = mysqli_connect("localhost", "jkolts", $mysql_password, "jkolts");
+	$connect = mysqli_connect("localhost", "jsimmons49", $mysql_password, "jsimmons49");
 	/*
 		Sharkey's Website Redesign 
 		Created by Foxhound Tech

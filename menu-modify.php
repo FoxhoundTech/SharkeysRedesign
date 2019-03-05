@@ -4,7 +4,7 @@
 	require_once("utils.php");
 	require_once("sharkeys-constants.php");
 	global $foodAllowed;
-	$connect = mysqli_connect("localhost", "jkolts", $mysql_password, "jkolts");
+	$connect = mysqli_connect("localhost", "jsimmons49", $mysql_password, "jsimmons49");
 	/*
 		Sharkey's Website Redesign 
 		Created by Foxhound Tech

@@ -1,3 +1,3 @@
 <?php
-	$mysql_password = "Godzilla1@";
+	$mysql_password = "JMjjj12";
 ?>

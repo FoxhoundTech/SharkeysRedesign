@@ -4,7 +4,7 @@
 	require_once("utils.php");
 	require_once("sharkeys-constants.php");
 	global $foodAllowed;
-	$connect = mysqli_connect("localhost", "jkolts", $mysql_password, "jkolts");
+	$connect = mysqli_connect("localhost", "jsimmons49", $mysql_password, "jsimmons49");
 	/*
 		Sharkey's Website Redesign 
 		Created by Foxhound Tech
@@ -41,7 +41,8 @@
 		<div class="card col-md-3 mx-auto shadow">
 				<div class="card-header"><strong>Edit details for <?php echo htmlspecialchars($item); ?>:</strong><br/>
 					<form action="delete.php" method="post">
-						<input class="btn btn-primary" type="submit" value="Delete" name="<?php echo $item; ?>">
+						<input class="btn btn-primary" type="submit" value="Delete">
+						<input name='name' id='name' value='<?php echo $item; ?>' hidden='hidden'>
 					</form>
 				</div>
 				<div class="card-body">
