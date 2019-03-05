@@ -18,19 +18,33 @@
 		?>
 		<h3>Drop the tables</h3>
 		<?php
+			
+			//drops 1st table login page? dunno
 			$SQLcmd = "DROP TABLE Login"; 
 			echo "DROP statement: <br/><tt>",htmlspecialchars($SQLcmd),"</tt><br/>\n";
 			$results = mysqli_query($connect,$SQLcmd); 
 			echo "Result of DROP: <tt>", htmlspecialchars($results), "</tt><br/>\n";
+			
+			//drops menu table
 			$SQLcmd2 = "DROP TABLE menu";
 			echo "DROP statement: <br/><tt>",htmlspecialchars($SQLcmd2),"</tt><br/>\n";
 			$results2 = mysqli_query($connect, $SQLcmd2);
 			echo "Result of DROP: <tt>", htmlspecialchars($results2),"</tt><br/>\n";
+			
+			//drops sauce table (table too saucy drop that b)
 			$SQLcmd3 = "DROP TABLE sauce";
 			echo "DROP statement: <br/><tt>",htmlspecialchars($SQLcmd3),"</tt><br/>\n";
 			$results3 = mysqli_query($connect, $SQLcmd3);
 			echo "Result of DROP: <tt>", htmlspecialchars($results3),"</tt><br/>\n";
+
+			//drops beer table
+			$SQLcmd4 = "DROP TABLE beer";
+			echo "DROP statement: <br/><tt>",htmlspecialchars($SQLcmd4),"</tt><br/>\n";
+			$results4 = mysqli_query($connect, $SQLcmd4);
+			echo "Result of DROP: <tt>", htmlspecialchars($results4),"</tt><br/>\n";
+
 		?>
+		
 		<h3>Create new Table</h3>
 		<?php
 			$query = "CREATE TABLE Login(username VARCHAR(20) PRIMARY KEY
@@ -39,6 +53,7 @@
 			$result = mysqli_query($connect, $query);
 			echo "Result of Create: <tt>", htmlspecialchars($result), "</tt><br/>\n";
 		?>
+		
 		<h3>Create Menu DB</h3>
 		<?php $query = "CREATE TABLE menu(name VARCHAR(50) PRIMARY KEY
 											, type VARCHAR(30)
@@ -57,6 +72,17 @@
 			echo "CREATE statement: <br/><tt>", htmlspecialchars($query),"</tt><br/>\n";
 			$result = mysqli_query($connect, $query);
 			echo "Result of Create: <tt>", htmlspecialchars($result), "</tt><br/>\n";
+		?>
+
+		<h3>Create Beer DB</h3>
+		<?php $query = "CREATE TABLE beer(name VARCHAR(50) PRIMARY KEY
+											, type VARCHAR(100)
+											, alcoholPercentage DECIMAL (3,1)
+											, craftedLocation VARCHAR(50)
+											, description VARCHAR(1500))"; //not sure if there is a better var to use, I saw nvchar on stackoverflow dunno
+			echo "CREATE statement: <br/><tt>", htmlspecialchars($query),"</tt><br/>\n";
+			$result = mysqli_query($connect, $query);
+			echo "Result of Create:<tt>", htmlspecialchars($result), "</tt><br/>\n";
 		?>
 		
 		<h3>Insert Menu</h3>
@@ -837,6 +863,41 @@
 			echo "Insert Statement: <code><pre>", htmlspecialchars($stmt131), "</pre></code><br/>\n";
 			$result = mysqli_query($connect, $stmt131);
 			if($result) { echo "Insert Successful\n<br/>";	}
+
+			///////////////////////////////////////////////////////////////////////////////////////
+			
+			$stmt132 = "INSERT INTO beer(name, type, alcoholPercentage, craftedLocation, description) VALUES ('Cuvée Peach Belgian Tripel','Limited Edition Specialty Brews',9.0,'Hardywood Park Craft Brewery Richmond, VA', 'Hardywood Cuvée Peach is artfully blended by our barrel master from small batches of Peach Tripel aged in white wine barrels at varying levels of maturation from three months to more than a year. The resulting beer is beautifully complex with yeast derived stone fruit esters that harmonize with juicy peach undertones. This sparkling refresher offers a pleasantly dry finish with the slightest hint of vanilla from the toasted French Oak barrels.')";
+			echo "Insert Statement: <code><pre>", htmlspecialchars($stmt132), "</pre></code><br/>\n";
+			$result = mysqli_query($connect, $stmt132);
+			if($result) { echo "Insert Successful\n<br/>";	}
+
+			$stmt133 = "INSERT INTO beer(name, type, alcoholPercentage, craftedLocation, description) VALUES ('Kentucky Bourbon Barrel Coffee Stout Stout - Coffee','Limited Edition Specialty Brews',8.0,'Lexington Brewing & Distilling Co. Lexington, KY', 'Formerly simply "Kentucky Bourbon Barrel Stout," Alltech has added "Coffee" to the label, but this is the same recipe was it was before. It was always a coffee stout. Kentucky Bourbon Barrel Stout® builds on the success of its barrel-aged brother, the beloved Kentucky Bourbon Barrel Ale®. Kentucky Bourbon Barrel Stout is brewed and aged with Alltech® Café Citadelle Haitian coffee and aged in world-famous Kentucky bourbon barrels. The result is a complex stout with dark-roasted malts, hints of caramel and vanilla and a lightly roasted coffee finish. PAIRING SUGGESTIONS — Big intense dishes, roast beef, lamb or game, grilled or roasted. Rich, moderately aged cheese. Chocolate peanut butter desserts, anything with toasted coconut. Hops: East Kent Goldings Malts: 2 Row Pale, Caramel 80, Chocolate Malt, Carapils Tasting Notes: Lightly sweet, notes of coffee, vanilla, caramel, toffee and oak. Light roasted coffee finish.')";
+			echo "Insert Statement: <code><pre>", htmlspecialchars($stmt133), "</pre></code><br/>\n";
+			$result = mysqli_query($connect, $stmt133);
+			if($result) { echo "Insert Successful\n<br/>";	}
+
+			$stmt134 = "INSERT INTO beer(name, type, alcoholPercentage, craftedLocation, description) VALUES ('Andygator Bock - Maibock / Heller (Helles) / Lentebock','Limited Edition Specialty Brews',8.0,'Abita Brewing Company Abita Springs, LA', 'Andygator® is a fearsome beast. Don’t let his toothy grin, slightly sweet flavor and subtle fruit aroma fool you: this cold-blooded creature is a Helles Doppelbock that can sneak up on you. This unique, high-gravity brew is made with pale malt, German lager yeast and German Perle hops. Sip, don’t gulp, and taste the wild of Abita Andygator.®')";
+			echo "Insert Statement: <code><pre>", htmlspecialchars($stmt134), "</pre></code><br/>\n";
+			$result = mysqli_query($connect, $stmt134);
+			if($result) { echo "Insert Successful\n<br/>";	}
+
+			$stmt135 = "INSERT INTO beer(name, type, alcoholPercentage, craftedLocation, description) VALUES ('Cubano-style Espresso Brown Ale Brown Ale - English','Limited Edition Specialty Brews',5.5,'Cigar City Brewing  Tampa, FL', 'This Brown Ale is brewed with a heaping amount of Cubano-style espresso beans, vanilla and cacao nibs. Rich coffee notes dominate this beer, while it finds balance with a smooth malty backbone. Pairs well with arroz con leche and, of course, a delicate shot of Cubano espresso. Brewed with a proprietary blend of coffee beans produced in tandem with Buddy Brew Coffee in Tampa, Florida.')";
+			echo "Insert Statement: <code><pre>", htmlspecialchars($stmt135), "</pre></code><br/>\n";
+			$result = mysqli_query($connect, $stmt135);
+			if($result) { echo "Insert Successful\n<br/>";	}
+
+			$stmt136 = "INSERT INTO beer(name, type, alcoholPercentage, craftedLocation, description) VALUES ('Black Butte XXX Porter - Imperial / Double','Limited Edition Specialty Brews',13.6,'Deschutes Brewery Bend, OR', 'N/A')";
+			echo "Insert Statement: <code><pre>", htmlspecialchars($stmt136), "</pre></code><br/>\n";
+			$result = mysqli_query($connect, $stmt136);
+			if($result) { echo "Insert Successful\n<br/>";	}
+
+			$stmt137 = "INSERT INTO beer(name, type, alcoholPercentage, craftedLocation, description) VALUES ('MO Pale Ale - American','Limited Edition Specialty Brews',6.0,'Maine Beer Company Freeport, ME', 'Our first run at an American Pale Ale. Flavors and aromas of zesty citrus, passionfruit, and pine present themselves throughout. A very subtle malt sweetness for balance, but this is intended to finish dry.')";
+			echo "Insert Statement: <code><pre>", htmlspecialchars($stmt137), "</pre></code><br/>\n";
+			$result = mysqli_query($connect, $stmt137);
+			if($result) { echo "Insert Successful\n<br/>";	}
+
+			//WIP still need to add the rest of the beers stopping here to make sure I'm even doing this right.
+
 		?>
 		
 		<h3>Insert Admin</h3>
