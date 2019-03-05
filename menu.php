@@ -1,45 +1,44 @@
 <?php 
-	error_reporting(E_ALL);
-	ini_set('display_errors', 1);
 	require_once("se_db_password.php"); 
 	require_once("utils.php");
-	$connect = mysqli_connect("localhost", "jsimmons49", $mysql_password, "jsimmons49");
+	$connect = mysqli_connect("localhost", "jkolts", $mysql_password, "jkolts");
+	/*
+		Sharkey's Website Redesign 
+		Created by Foxhound Tech
+		
+		Menu Page
+	*/
 	$title = "Menu";
 ?>
 <!DOCTYPE html>
 <html>
 	<head>
-	<meta charset="UTF-8">
+		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<title><?php echo $title; ?></title>
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-		<link rel="stylesheet" href="sharkeys.css" type='text/css'>
-		<style> <!-- Trying to change the size of images for the image carousel -->
+		<style> 
 			.carousel-inner{
-				height: 300px;
-			}			
-			.item, img{
-				height: 100%;
-				width:  100%;
-				border: 1px solid white;
+				height: 400px;
 			}
 		</style>
+		<link rel="stylesheet" href="sharkeys.css" type='text/css'>		
 	</head>	
 	<body>
 		<?php require_once("navbar.php"); ?>
-		
+		<br/><br/>
 		<!-- Image Carousel -->
 		<div id="menuCarousel" class="carousel slide pt-5" data-ride="carousel">
 			<div class="carousel-inner">
 				<!--<div class="carousel-item active">
-					<img class="d-block w-100" src="burger.jpg" alt="First slide">
+					<img class="d-block w-100" src="burger.jpg" alt="First slide" style="height: 100% !important; width:  100% !important; border: 1px solid white;">
 				</div>-->
 				<div class="carousel-item active">
-					<img class="d-block w-100" src="wrap.jpg" alt="Second slide">
+					<img class="d-block w-100" src="wrap.jpg" alt="Second slide" style="height: 100% !important; width:  100% !important; border: 1px solid white;">
 				</div>
 				<div class="carousel-item">
-					<img class="d-block w-100" src="sandwich.jpg" alt="Third slide">
+					<img class="d-block w-100" src="sandwich.jpg" alt="Third slide" style="height: 100% !important; width:  100% !important; border: 1px solid white;">
 				</div>
 			</div>
 			<a class="carousel-control-prev" href="#menuCarousel" role="button" data-slide="prev">
@@ -323,7 +322,9 @@
 			</div>
 		</div>
 		
-		<?php require_once('footer.php'); ?>
+		<?php
+		mysqli_close($connect);
+		require_once('footer.php'); ?>
 		
 		<script>
 			function updateNavbar() {

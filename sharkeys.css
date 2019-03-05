@@ -73,8 +73,8 @@ body {
     font-size: 20px;
     width: 20%;
     position: relative;
-    background: #f2f2f2;
-    color: #ffffff;
+    background: #35363A;
+    color: white;
     margin: 2em auto 3em;
     margin-bottom: 2em;
     border-radius: 25px;
@@ -119,6 +119,7 @@ body {
 }
 
 .footer {
+	all: initial;
 	width: 100%;
 	border: 1px solid darkred;
 	border-radius: 15px;

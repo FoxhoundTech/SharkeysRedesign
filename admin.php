@@ -12,7 +12,7 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title> <?php echo $title; ?> </title>
+		<title> <?php echo $title;; ?> </title>
 		<link rel="stylesheet" type="text/css" href="sharkeys.css">
 		<meta charset="utf-8" />
 	</head>
