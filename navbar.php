@@ -25,7 +25,7 @@
 			<a id='drink' href="drink-menu.php">Drinks</a>
 			<a id='admin' href="admin.php">Admin</a>
 			<a id='menu' href="menu.php">Menu</a>
-			<a id='home' href="index.php">Home</a>
+			<a id='home' href="home.php">Home</a>
 		</div>
 	</body>
 </html>
