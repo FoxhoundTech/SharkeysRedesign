@@ -41,7 +41,8 @@
 		<div class="card col-md-3 mx-auto shadow">
 				<div class="card-header"><strong>Edit details for <?php echo htmlspecialchars($item); ?>:</strong><br/>
 					<form action="delete.php" method="post">
-						<input class="btn btn-primary" type="submit" value="Delete" name="<?php echo $item; ?>">
+						<input class="btn btn-primary" type="submit" value="Delete">
+						<input name='name' id='name' value='<?php echo $item; ?>' hidden='hidden'>
 					</form>
 				</div>
 				<div class="card-body">
@@ -50,7 +51,7 @@
 							<label for="name">Name:</label>
 							<input type="text" class="form-control" id="name" name="name" value="<?php echo htmlspecialchars($item); ?>">
 							<label for="category">Category:</label>
-							<select class="form-control" id="category" name="category" required>
+							<select class="form-control selectpicker" id="category" name="category" required>
 								<option>Select Category</option>
 								<?php 
 									foreach( $foodAllowed AS $value ) {

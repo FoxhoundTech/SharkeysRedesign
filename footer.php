@@ -10,8 +10,8 @@
 				<p>Hours: 11AM-2AM</p>
 			</div>
 			<div class='social-media-footer'>
-				<a href="https://www.facebook.com/sharkeysradford/"><img src='facebooklogored.png' alt='facebook logo' width='80px' height='80px'/></a>
-				<a href="https://www.facebook.com/sharkeys.blacksburg/"><img src='facebooklogo.png' alt='facebook logo' width='80px' height='80px'/></a>
+				<a href="https://www.facebook.com/sharkeysradford/"><img src='images/facebooklogored.png' alt='facebook logo' width='80px' height='80px'/></a>
+				<a href="https://www.facebook.com/sharkeys.blacksburg/"><img src='images/facebooklogo.png' alt='facebook logo' width='80px' height='80px'/></a>
 			</div>
 			<div class='copyright-info'>
 				<p>Copyright 2018. All Rights Reserved.</p>

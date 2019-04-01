@@ -1,0 +1,26 @@
+version: 2
+jobs:
+  build:
+    docker:
+      # specify the version you desire here
+      - image: circleci/node
+
+    working_directory: ~/repo
+
+    steps:
+      - checkout
+      - run: sudo npm i pnpm -g
+
+      # Download and cache dependencies
+      - restore_cache:
+          keys:
+          - v1-dependencies-{{ checksum "package.json" }}
+
+      - run: pnpm install --frozen-lockfile
+
+      - save_cache:
+          paths:
+            - ~/.pnpm/store
+          key: v1-dependencies-{{ checksum "package.json" }}
+
+      - run: pnpm test

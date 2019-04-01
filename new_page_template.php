@@ -25,7 +25,7 @@
 	
 		<script>
 			function updateNavbar() {
-				document.getElementById('menu').className += " active";
+				document.getElementById('admin').className += " active";
 			}
 			
 			updateNavbar();
