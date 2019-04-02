@@ -3,7 +3,7 @@
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 		require_once("se_db_password.php"); 
-		$connect = mysqli_connect("localhost", "jsimmons49", $mysql_password, "jsimmons49");
+		$connect = mysqli_connect("localhost", "jkolts", $mysql_password, "jkolts");
 	?>
 	<head>
 		<title>Drinks</title>
@@ -18,26 +18,6 @@ ini_set('display_errors', 1);
 				<h1>Drinks</h1>
 			</div>
 			
-			<div class='menu-section'>
-				<div class='grid-container-a'>
-				<?php
-					$appQuery = "SELECT * FROM menu WHERE type = 'Shark Bites'";
-					$results = mysqli_query($connect, $appQuery);
-					if($results) {
-						while($row = mysqli_fetch_assoc($results)) {
-							echo "<div class='grid-item'>";
-							echo "<h3>" . htmlspecialchars($row['name']) . ". . . $" . htmlspecialchars($row['price']) . "</h3>";
-							echo "<h4>" . htmlspecialchars($row['description']) . "</h4>";
-							echo "</div>";
-						}
-					} else {
-						echo "Failed";
-					}
-					mysqli_close($connect);
-				?>
-				</div>
-			</div>
-		
 			<div class="specialty-brew-title">
 				<h1>Limited Edition Specialty Brews<h1>
 			</div>
@@ -321,11 +301,10 @@ ini_set('display_errors', 1);
 		
 		<script>
 			function updateNavbar() {
-				document.getElementById('menu').className += " active";
+				document.getElementById('drink').className += " active";
 			}
 			
 			updateNavbar();
 		</script>
-		<!--Pork Title Grid Insert Here-->
 	</body>
 </html> 

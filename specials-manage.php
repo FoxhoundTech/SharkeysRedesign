@@ -9,9 +9,9 @@
 		Sharkey's Website Redesign 
 		Created by Foxhound Tech
 		
-		Menu-Modify Page
+		manage specials manager
 	*/
-	$title="Modify Menu";
+	$title="Manage Specials";
 ?><!DOCTYPE html>
 
 <html>
@@ -22,37 +22,37 @@
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
 		<link rel="stylesheet" type="text/css" href="sharkeys.css">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"/>
+		
+		<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 	</head>
 	<body>
 		<?php require_once("navbar.php"); ?>
 		
 		<div class="pt-5 pb-5"></div>
-		<div class="row pt-5">
+		<div class="row pt-5 mb-5">
 			<div class="card col-md-6 mx-auto shadow">
-				<div class="card-header"><strong>Select menu item to edit:</strong></div>
-				<div class="card-body" style="height: 50em; overflow-y: scroll">
+				<div class="card-header"><strong>Current Specials:</strong></div>
+				<div class="card-body" style="height: 40em; overflow-y: scroll">
 					<table class="table table-hover">
 						<thead>
 							<tr>
-								<th scope="col"></th>
-								<th scope="col">Name:</th>								
+								<th scope="col">Name:</th>					
 								<th scope="col">Type:</th>
 								<th scope="col">Price:</th>
-								<th scope="col">Description:</th>
-								<th scope="col">Edit Item:</th>
+								<th scope="col">description:</th>
+								<th scope="col">Url:</th>
+								<th scope="col">Manage:</th>
 							</tr>
 						</thead>
 						<tbody>
-							<?php						
-								$SQLcmd = "SELECT * FROM menu";
+							<?php 						
+								$SQLcmd = "SELECT * FROM specials";
 								$results = mysqli_query($connect,$SQLcmd);
 								
-								$i = 1;
 								while ($row=mysqli_fetch_assoc($results)) {
-									echo editTable( $i, $row['name'], $row['type'], $row['price'], $row['description'] );
-									$i++;
+									echo specialManage( $row['name'], $row['type'], $row['price'], $row['description'], $row['url']);
 								}
-								mysqli_close($connect);
 							?>
 						</tbody>
 					</table>
@@ -60,32 +60,47 @@
 			</div>
 			
 			<div class="card col-md-3 mx-auto shadow">
-				<div class="card-header"><strong>Add new item to menu:</strong></div>
+				<div class="card-header"><strong>Create New Special:</strong></div>
 				<div class="card-body">
-					<form action='menu-modify-handle.php' method='post'>
-						<div class="form-group">
-							<label for="name">Name:</label>
-							<input type="text" class="form-control" id="name" name="name" placeholder="Enter name">
-							<label for="category">Category:</label>
-							<select class="form-control" id="category" name="category">
-								<option>Select Category</option>
-								<?php 
-									foreach( $foodAllowed AS $value ) {
-										echo "<option>$value</option>";
-									}
-								?>
-							</select>
-							<label for="price">Price:</label>
-							<input type="number" class="form-control" id="price" name="price" placeholder="Enter price" min="0" step="0.01">
-							<label for="description">Description</label>
-							<textarea class="form-control" id="description" name="description" rows="3"></textarea>	
-							<input class="form-control btn btn-primary" type="submit">
+					<form action="specials-create.php" method="post">
+						<div class="form-row justify-content-center">
+							<div class="form-group col-md">
+								<label for="specialName">Name:</label>
+								<input type="text" class="form-control" id="specialName" name="specialName" placeholder="Enter Name">
+							</div>
+							<div class="form-group col-md">
+								<label for="specialType">Type of Special:</label>
+								<select class="form-control selectpicker" id="specialType" name="specialType" required>
+									<option value="" disabled selected>Select type</option>
+									<option>food</option>
+									<option>drink</option>
+								</select>
+							</div>
 						</div>
+						<div class="form-row justify-content-center">
+							<div class="form-group col-md">
+								<label for="specialPrice">Price:</label>
+								<input type="text" class="form-control" id="specialPrice" name="specialPrice" placeholder="Enter price">
+							</div>
+							<div class="form-group col-md">
+								<label for="specialURL">Image URL:</label>
+								<input type="text" class="form-control" id="specialURL" name="specialURL" placeholder="Enter url">
+							</div>
+						</div>
+						<label for="specialDescription">Specials:</label>
+						<textarea class="form-control mb-2" id="specialDescription" name="specialDescription" rows="3"></textarea>
+						<input class="form-control btn btn-primary" type="submit">
 					</form>
 				</div>
 			</div>
 		</div>
-	
+		
+		<?php
+			mysqli_close($connect);
+			
+			require_once("footer.php"); 
+		?>
+		
 		<script>
 			function updateNavbar() {
 				document.getElementById('admin').className += " active";

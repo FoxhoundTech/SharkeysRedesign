@@ -1,12 +1,17 @@
 <?php
 	error_reporting(e_all);
+	require_once("se_db_password.php"); 
+	require_once("utils.php");
+	require_once("sharkeys-constants.php");
+	global $foodAllowed;
+	$connect = mysqli_connect("localhost", "jsimmons49", $mysql_password, "jsimmons49");
 	/*
 		Sharkey's Website Redesign 
 		Created by Foxhound Tech
 		
 		Menu-Modify Page
 	*/
-	$title="Modify Menu";
+	$title="Specials";
 ?><!DOCTYPE html>
 
 <html>
@@ -20,12 +25,28 @@
 	</head>
 	<body>
 		<?php require_once("navbar.php"); ?>
+		<div class="mt-5 pt-5 mb-5"></div>
+		<h1 class="text-center" style="color: white">Specials</div>
+		<div class="container mt-5 mb-5" style="color: black">
+
 		
-		
+			<?php
+				$SQLcmd = "SELECT * FROM specials";
+				$results = mysqli_query($connect, $SQLcmd);
+				while( $row=mysqli_fetch_assoc($results)) {
+						echo specialCards($row['name'], $row['type'], $row['price'], $row['description'], $row['url']);
+				}
+			?>
+			
+		</div>
 	
+		<?php 
+			mysqli_close($connect); 
+			require_once("footer.php");
+		?>
 		<script>
 			function updateNavbar() {
-				document.getElementById('admin').className += " active";
+				document.getElementById('specials').className += " active";
 			}
 			
 			updateNavbar();

@@ -51,7 +51,7 @@
 							<label for="name">Name:</label>
 							<input type="text" class="form-control" id="name" name="name" value="<?php echo htmlspecialchars($item); ?>">
 							<label for="category">Category:</label>
-							<select class="form-control" id="category" name="category" required>
+							<select class="form-control selectpicker" id="category" name="category" required>
 								<option>Select Category</option>
 								<?php 
 									foreach( $foodAllowed AS $value ) {

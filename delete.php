@@ -3,7 +3,7 @@
 	require_once("se_db_password.php"); 
 	require_once("utils.php");
 	require_once("sharkeys-constants.php");
-	$connect = mysqli_connect("localhost", "jsimmons49", $mysql_password, "jsimmons49");
+	$connect = mysqli_connect("localhost", "jkolts", $mysql_password, "jkolts");
 	/*
 		Sharkey's Website Redesign 
 		Created by Foxhound Tech

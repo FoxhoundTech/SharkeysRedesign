@@ -1,5 +1,4 @@
 <?php 
-
 	error_reporting(e_all);
 	ini_set('display_errors', 1);
 	require_once("se_db_password.php"); 
@@ -32,6 +31,8 @@
 	</head>
 	<body>
 		<?php 
+		
+		//Populate Calendar
 			require_once("navbar.php"); 
 						
 			$SQLcmd = "SELECT * FROM events";
@@ -46,7 +47,25 @@
 				
 				array_push($events, $eventsArray);
 			}
-			$events_encoded = json_encode( $events );		
+			$events_encoded = json_encode( $events );	
+
+		//Submit Event request
+			$contact = mysqli_real_escape_string($connect, $_POST['inputName']);
+			$type = mysqli_real_escape_string($connect, $_POST['inputType']);
+			$phone = mysqli_real_escape_string($connect, $_POST['inputPhone']);
+			$date = mysqli_real_escape_string($connect, $_POST['inputDate']);
+			$email = mysqli_real_escape_string($connect, $_POST['inputEmail']);
+			$guests = mysqli_real_escape_string($connect, $_POST['inputGuests']);
+			$comments = mysqli_real_escape_string($connect, $_POST['inputComments']);
+		
+			$sqlStmt = "INSERT INTO pendingEvents(contact, type, phone, date, email, guests, comments) VALUES ( '$contact', '$type', '$phone', '$date', '$email', '$guests', '$comments')";
+			$result = mysqli_query($connect, $sqlStmt);
+			if($result) {
+				$success = true;
+			}
+			else {
+				$success = false;
+			}
 		?>
 		
 		<div class="pt-5 text-center">
@@ -55,7 +74,7 @@
 		
 		<div class="container pb-5 justify-content-center">
 			<div class="row">
-				<div class="card mr-2 col-md px-0">
+				<div class="card mr-2 col-md pb-2">
 					<div class="card-header text-center">Sharkey's Up Top in Radford</div>
 					<img class="card-img-bottom" src="images/upTop.jpg" alt="Up Top Information"/>
 				</div>
@@ -64,10 +83,10 @@
 				</div>
 			</div>
 			<div class="row mt-1">
-				<div class="card col-sm mr-2 px-0">
+				<div class="card col-sm mr-2">
 					<img class="card-img" src="images/djsuds.jpg" alt="DJ Suds"/>
 				</div>
-				<div class="card col-sm-7 h-25 mr-2 px-0">
+				<div class="card col-sm-7 h-25 mr-2">
 					<img class="card-img" src="images/event.jpg" alt="Location Image"/>
 				</div>
 				<div class="card col-sm">
@@ -84,45 +103,11 @@
 			<div class="card col-md">
 				<div class="card-header text-center"><h3>Schedule Your Event With Us<h3></div>
 				<div class="card-body">
-					<form action="events-submit.php" method="post">
-						<div class="form-row justify-content-center">
-							<div class="form-group col-md-4">
-								<label for="inputName">Name:</label>
-								<input type="text" class="form-control" id="inputName" name="inputName" placeholder="Enter Name">
-							</div>
-							<div class="form-group col-md-4">
-								<label for="inputType">Type of Event:</label>
-								<input type="text" class="form-control" id="inputType"  name="inputType" placeholder="Enter Event Type">
-							</div>
-						</div>
-						<div class="form-row justify-content-center">
-							<div class="form-group col-md-4">
-								<label for="inputPhone">Phone:</label>
-								<input type="tel" class="form-control" id="inputPhone" name="inputPhone" placeholder="Enter Phone">
-							</div>
-							<div class="form-group col-md-4">
-								<label for="inputDate">Event Date:</label>
-								<input type="text" class="form-control" id="inputDate" name="inputDate" placeholder="Select Date">
-							</div>
-						</div>
-						<div class="form-row justify-content-center">
-							<div class="form-group col-md-4">
-								<label for="inputEmail">Email:</label>
-								<input type="email" class="form-control" id="inputEmail" name="inputEmail" placeholder="Enter Email">
-							</div>
-							<div class="form-group col-md-4">
-								<label for="inputGuests">Number of Guests:</label>
-								<input type="number" class="form-control" id="inputGuests" name="inputGuests" placeholder="Enter Guest Count">
-							</div>
-						</div>
-						<div class="form-row justify-content-center">
-							<div class="form-group col-md-8">
-								<label for="inputComments">Questions / Comments:</label>
-								<textarea class="form-control" id="inputComments" name="inputComments" rows="10"></textarea>
-							</div>
-						</div>
-						<div class="text-center"><button class="btn btn-primary" onclick="#">Submit Request</button></div>
-					</form>
+					<?php if ($success === true) { ?>
+					<div class="alert alert-success text-center" role="alert">Event request recieved. Our event planner will contact you shortly.</div>
+					<?php } else { ?>
+					<div class="alert alert-danger text-center" role="alert">Event request failed.  Please try again later.</div>
+					<?php } ?>
 				</div>
 			</div>
 		</div>

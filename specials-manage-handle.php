@@ -9,9 +9,9 @@
 		Sharkey's Website Redesign 
 		Created by Foxhound Tech
 		
-		Menu-Modify Page
+		Event Manager sub Page
 	*/
-	$title="Modify Menu";
+	$title="Manage Events";
 ?><!DOCTYPE html>
 
 <html>
@@ -24,67 +24,57 @@
 		<link rel="stylesheet" type="text/css" href="sharkeys.css">
 	</head>
 	<body>
-		<?php require_once("navbar.php"); ?>
-		
-		<div class="pt-5 pb-5"></div>
-		<div class="row pt-5">
-			<div class="card col-md-6 mx-auto shadow">
-				<div class="card-header"><strong>Select menu item to edit:</strong></div>
-				<div class="card-body" style="height: 50em; overflow-y: scroll">
-					<table class="table table-hover">
-						<thead>
-							<tr>
-								<th scope="col"></th>
-								<th scope="col">Name:</th>								
-								<th scope="col">Type:</th>
-								<th scope="col">Price:</th>
-								<th scope="col">Description:</th>
-								<th scope="col">Edit Item:</th>
-							</tr>
-						</thead>
-						<tbody>
-							<?php						
-								$SQLcmd = "SELECT * FROM menu";
-								$results = mysqli_query($connect,$SQLcmd);
-								
-								$i = 1;
-								while ($row=mysqli_fetch_assoc($results)) {
-									echo editTable( $i, $row['name'], $row['type'], $row['price'], $row['description'] );
-									$i++;
-								}
-								mysqli_close($connect);
-							?>
-						</tbody>
-					</table>
-				</div>
-			</div>
+		<?php
+			require_once("navbar.php"); 
 			
-			<div class="card col-md-3 mx-auto shadow">
-				<div class="card-header"><strong>Add new item to menu:</strong></div>
+			$name = mysqli_real_escape_string($connect, $_GET['name']);
+			$SQLcmd = "SELECT * FROM specials WHERE name='$name'";
+			$results = mysqli_query($connect, $SQLcmd);
+			while ($row=mysqli_fetch_assoc($results)) {
+				$type = $row['type'];
+				$price = $row['price'];
+				$description = $row['description'];
+				$url = $row['url'];
+			}
+			if (!$results) { echo "<br/><br/><br/><br/><h3>There doesn't seem to be a special like that.</h3>";  }
+			else {	
+		?>
+		<div class="pt-5 pb-5"></div>
+		<div class="card col-md-3 mx-auto shadow">
+				<div class="card-header"><strong>Edit details for <?php echo htmlspecialchars($name); ?>:</strong><br/>
+					<form action="specials-delete.php" method="post">
+						<input class="btn btn-primary" type="submit" value="Delete">
+						<input name='name' id='name' value='<?php echo $name; ?>' hidden='hidden'>
+					</form>
+				</div>
 				<div class="card-body">
-					<form action='menu-modify-handle.php' method='post'>
+					<form action='specials-update.php' method='post'>
 						<div class="form-group">
 							<label for="name">Name:</label>
-							<input type="text" class="form-control" id="name" name="name" placeholder="Enter name">
-							<label for="category">Category:</label>
-							<select class="form-control" id="category" name="category">
+							<input type="text" class="form-control" id="name" name="name" value="<?php echo htmlspecialchars($name); ?>">
+							<label for="type">Type:</label>
+							<select class="form-control selectpicker" id="type" name="type" required>
 								<option>Select Category</option>
-								<?php 
-									foreach( $foodAllowed AS $value ) {
-										echo "<option>$value</option>";
-									}
-								?>
+								<option>food</option>
+								<option>drink</option>
 							</select>
 							<label for="price">Price:</label>
-							<input type="number" class="form-control" id="price" name="price" placeholder="Enter price" min="0" step="0.01">
+							<input type="number" class="form-control" id="price" name="price" value="<?php echo htmlspecialchars($price); ?>" min="0" step="0.01" required>
+							<label for="url">URL:</label>
+							<input type="text" class="form-control" id="url" name="url" value="<?php echo htmlspecialchars($url); ?>">
 							<label for="description">Description</label>
-							<textarea class="form-control" id="description" name="description" rows="3"></textarea>	
+							<textarea class="form-control" id="description" name="description" rows="3"><?php echo htmlspecialchars($description); ?></textarea>	
 							<input class="form-control btn btn-primary" type="submit">
 						</div>
 					</form>
 				</div>
 			</div>
-		</div>
+			
+		<?php 
+			}
+			mysqli_close($connect); 
+		?>
+			
 	
 		<script>
 			function updateNavbar() {
