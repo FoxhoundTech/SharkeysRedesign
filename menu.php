@@ -28,6 +28,7 @@
 	<body>
 		<?php require_once("navbar.php"); ?>
 		<br/><br/>
+		<?php /*
 		<!-- Image Carousel -->
 		<div id="menuCarousel" class="carousel slide pt-5" data-ride="carousel">
 			<div class="carousel-inner">
@@ -35,10 +36,10 @@
 					<img class="d-block w-100" src="burger.jpg" alt="First slide" style="height: 100% !important; width:  100% !important; border: 1px solid white;">
 				</div>-->
 				<div class="carousel-item active">
-					<img class="d-block w-100" src="wrap.jpg" alt="Second slide" style="height: 100% !important; width:  100% !important; border: 1px solid white;">
+					<img class="d-block w-100" src="images/wrap.jpg" alt="Second slide" style="height: 100% !important; width:  100% !important; border: 1px solid white;">
 				</div>
 				<div class="carousel-item">
-					<img class="d-block w-100" src="sandwich.jpg" alt="Third slide" style="height: 100% !important; width:  100% !important; border: 1px solid white;">
+					<img class="d-block w-100" src="images/sandwich.jpg" alt="Third slide" style="height: 100% !important; width:  100% !important; border: 1px solid white;">
 				</div>
 			</div>
 			<a class="carousel-control-prev" href="#menuCarousel" role="button" data-slide="prev">
@@ -49,13 +50,13 @@
 				<span class="carousel-control-next-icon" aria-hidden="true"></span>
 				<span class="sr-only">Next</span>
 			</a>
-		</div>
+		</div> 
+		*/ ?>
 		<div class="pt-5 text-center">
-			<h1 style="color: white">MENU</h1>
+			<h1 style="color: white">Menu</h1>
 		</div>
 		
 		<!--Menu Accordion -->
-		</div>
 		<div id="accordion" style="padding-top: 2%;padding-left: 10%; padding-right: 10%; padding-bottom: 2%">
 			<div class="card">
 				<div class="card-header" id="sharkBitesHeading">

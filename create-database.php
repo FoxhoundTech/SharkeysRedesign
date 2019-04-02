@@ -42,7 +42,30 @@
 			echo "DROP statement: <br/><tt>",htmlspecialchars($SQLcmd4),"</tt><br/>\n";
 			$results4 = mysqli_query($connect, $SQLcmd4);
 			echo "Result of DROP: <tt>", htmlspecialchars($results4),"</tt><br/>\n";
-
+			
+			//Drop Event Table
+			$SQLcmd5 = "DROP TABLE events";
+			echo "DROP statement: <br/><tt>",htmlspecialchars($SQLcmd5),"</tt><br/>\n";
+			$results5 = mysqli_query($connect, $SQLcmd5);
+			echo "Result of DROP: <tt>", htmlspecialchars($results5),"</tt><br/>\n";
+			
+			//Drop unapproved Event Table
+			$SQLcmd6 = "DROP TABLE declinedEvents";
+			echo "DROP statement: <br/><tt>",htmlspecialchars($SQLcmd6),"</tt><br/>\n";
+			$results6 = mysqli_query($connect, $SQLcmd6);
+			echo "Result of DROP: <tt>", htmlspecialchars($results6),"</tt><br/>\n";
+			
+			//Drop Pending Events Table
+			$SQLcmd7 = "DROP TABLE pendingEvents";
+			echo "DROP statement: <br/><tt>",htmlspecialchars($SQLcmd7),"</tt><br/>\n";
+			$results7 = mysqli_query($connect, $SQLcmd7);
+			echo "Result of DROP: <tt>", htmlspecialchars($results7),"</tt><br/>\n";
+			
+			//Drop Specials
+			$SQLcmd8 = "DROP TABLE specials";
+			echo "DROP statement: <br/><tt>",htmlspecialchars($SQLcmd8),"</tt><br/>\n";
+			$results8 = mysqli_query($connect, $SQLcmd8);
+			echo "Result of DROP: <tt>", htmlspecialchars($results8),"</tt><br/>\n";
 		?>
 		
 		<h3>Create new Table</h3>
@@ -80,6 +103,59 @@
 											, alcoholPercentage DECIMAL (3,1)
 											, craftedLocation VARCHAR(50)
 											, description VARCHAR(1500))"; //not sure if there is a better var to use, I saw nvchar on stackoverflow dunno
+			echo "CREATE statement: <br/><tt>", htmlspecialchars($query),"</tt><br/>\n";
+			$result = mysqli_query($connect, $query);
+			echo "Result of Create:<tt>", htmlspecialchars($result), "</tt><br/>\n";
+		?>
+		
+		<h3>Create Events DB</h3>
+		<?php $query = "CREATE TABLE events(id int NOT NULL AUTO_INCREMENT
+													, contact VARCHAR(20)
+													, type VARCHAR(20)
+													, phone VARCHAR(20)
+													, date DATE
+													, email varchar(20)
+													, guests INTEGER
+													, comments VARCHAR(300)
+													, PRIMARY KEY (id))"; 
+			echo "CREATE statement: <br/><tt>", htmlspecialchars($query),"</tt><br/>\n";
+			$result = mysqli_query($connect, $query);
+			echo "Result of Create:<tt>", htmlspecialchars($result), "</tt><br/>\n";
+		?>
+		
+		<h3>Create Declined Events DB</h3>
+		<?php $query = "CREATE TABLE declinedEvents(id int NOT NULL AUTO_INCREMENT
+													, start DATE
+													, end DATE
+													, title VARCHAR(20)
+													, declined_reason VARCHAR(30)
+													, PRIMARY KEY (id))"; 
+			echo "CREATE statement: <br/><tt>", htmlspecialchars($query),"</tt><br/>\n";
+			$result = mysqli_query($connect, $query);
+			echo "Result of Create:<tt>", htmlspecialchars($result), "</tt><br/>\n";
+		?>
+		
+		<h3>Create Pending Events DB</h3>
+		<?php $query = "CREATE TABLE pendingEvents(id int NOT NULL AUTO_INCREMENT
+													, contact VARCHAR(20)
+													, type VARCHAR(20)
+													, phone VARCHAR(20)
+													, date DATE
+													, email varchar(20)
+													, guests INTEGER
+													, comments VARCHAR(300)
+													, PRIMARY KEY (id))"; 
+			echo "CREATE statement: <br/><tt>", htmlspecialchars($query),"</tt><br/>\n";
+			$result = mysqli_query($connect, $query);
+			echo "Result of Create:<tt>", htmlspecialchars($result), "</tt><br/>\n";
+		?>
+		
+		<h3>Create Specials DB</h3>
+		<?php $query = "CREATE TABLE specials(name VARCHAR(50) PRIMARY KEY
+												, type VARCHAR(10)
+												, price DECIMAL(4,2)
+												, description VARCHAR(1500)
+												, url VARCHAR(30))"; 
 			echo "CREATE statement: <br/><tt>", htmlspecialchars($query),"</tt><br/>\n";
 			$result = mysqli_query($connect, $query);
 			echo "Result of Create:<tt>", htmlspecialchars($result), "</tt><br/>\n";
@@ -679,7 +755,7 @@
 			
 			$stmt96 = "INSERT INTO menu(name, type, price, description) VALUES ('Sauteed Mushroom, Onion and Swiss Burger','Burgers',11.5,'A classic! Add Applewood smoked bacon $1.50')";
 			echo "Insert Statement: <code><pre>", htmlspecialchars($stmt96), "</pre></code><br/>\n";
-			$result = mysqli_query($connect, $stmt96;
+			$result = mysqli_query($connect, $stmt96);
 			if($result) { echo "Insert Successful\n<br/>";	}
 			else { echo "<strong>Insert Failure</strong>\n<br>/<br>/"; }
 			
@@ -872,7 +948,8 @@
 			if($result) { echo "Insert Successful\n<br/>";	}
 
 			//not sure if " " is acceptable in the description since it's highlighting it differently should ask
-			$stmt133 = "INSERT INTO beer(name, type, alcoholPercentage, craftedLocation, description) VALUES ('Kentucky Bourbon Barrel Coffee Stout Stout - Coffee','Limited Edition Specialty Brews',8.0,'Lexington Brewing & Distilling Co. Lexington, KY', 'Formerly simply "Kentucky Bourbon Barrel Stout," Alltech has added "Coffee" to the label, but this is the same recipe was it was before. It was always a coffee stout. Kentucky Bourbon Barrel Stout® builds on the success of its barrel-aged brother, the beloved Kentucky Bourbon Barrel Ale®. Kentucky Bourbon Barrel Stout is brewed and aged with Alltech® Café Citadelle Haitian coffee and aged in world-famous Kentucky bourbon barrels. The result is a complex stout with dark-roasted malts, hints of caramel and vanilla and a lightly roasted coffee finish. PAIRING SUGGESTIONS — Big intense dishes, roast beef, lamb or game, grilled or roasted. Rich, moderately aged cheese. Chocolate peanut butter desserts, anything with toasted coconut. Hops: East Kent Goldings Malts: 2 Row Pale, Caramel 80, Chocolate Malt, Carapils Tasting Notes: Lightly sweet, notes of coffee, vanilla, caramel, toffee and oak. Light roasted coffee finish.')";
+
+			$stmt133 = "INSERT INTO beer(name, type, alcoholPercentage, craftedLocation, description) VALUES ('Kentucky Bourbon Barrel Coffee Stout Stout - Coffee','Limited Edition Specialty Brews',8.0,'Lexington Brewing & Distilling Co. Lexington, KY', 'Formerly simply Kentucky Bourbon Barrel Stout, Alltech has added Coffee to the label, but this is the same recipe was it was before. It was always a coffee stout. Kentucky Bourbon Barrel Stout® builds on the success of its barrel-aged brother, the beloved Kentucky Bourbon Barrel Ale®. Kentucky Bourbon Barrel Stout is brewed and aged with Alltech® Café Citadelle Haitian coffee and aged in world-famous Kentucky bourbon barrels. The result is a complex stout with dark-roasted malts, hints of caramel and vanilla and a lightly roasted coffee finish. PAIRING SUGGESTIONS — Big intense dishes, roast beef, lamb or game, grilled or roasted. Rich, moderately aged cheese. Chocolate peanut butter desserts, anything with toasted coconut. Hops: East Kent Goldings Malts: 2 Row Pale, Caramel 80, Chocolate Malt, Carapils Tasting Notes: Lightly sweet, notes of coffee, vanilla, caramel, toffee and oak. Light roasted coffee finish.')";
 			echo "Insert Statement: <code><pre>", htmlspecialchars($stmt133), "</pre></code><br/>\n";
 			$result = mysqli_query($connect, $stmt133);
 			if($result) { echo "Insert Successful\n<br/>";	}
@@ -909,6 +986,64 @@
 			if($result) { echo "Insert Successful";	}
 			else { echo "<strong>Insert Failure</strong>\n<br>/<br>/"; }
 		?>
+		
+		<h3>Insert Events</h3>
+		<?php
+			$sqlStmt = "INSERT INTO events (contact, type, phone, date, email, guests, comments) VALUES ('ITEC 472 Party', 'Work Party', '540-111-2222', '2019-04-08', 'test@drtest.com', 10, 'Party for all students. No profs allowed')";
+			echo "INSERT Statement: <code><pre>", htmlspecialchars($sqlStmt), "</pre></code><br/>\n";
+			$result = mysqli_query($connect, $sqlStmt);
+			if($result) { echo "Insert Successful";	}
+			else { echo "<strong>Insert Failure</strong>\n<br>/<br>/"; }
+		?>
+		
+		<h3>Insert Pending Event</h3>
+		<?php
+			$sqlStmt = "INSERT INTO pendingEvents(contact, type, phone, date, email, guests, comments) VALUES ('Dr. Test', 'Work Party', '540-111-1111', '2019-04-10', 'test@drtest.com', 10, 'I am so excited about booking through your new website')";
+			echo "INSERT Statement: <code><pre>", htmlspecialchars($sqlStmt), "</pre></code><br/>\n";
+			$result = mysqli_query($connect, $sqlStmt);
+			if($result) { echo "Insert Successful";	}
+			else { echo "<strong>Insert Failure</strong>\n<br>/<br>/"; }
+		?>
+		
+		<h3>Insert specials</h3>
+		<?php
+			$sqlStmt = "INSERT INTO specials(name, type, price, description, url) VALUES ('Free Burger Monday', 'food', null, 'Buy one, get one free on all burgers', 'images/burger-monday.png')";
+			echo "INSERT Statement: <code><pre>", htmlspecialchars($sqlStmt), "</pre></code><br/>\n";
+			$result = mysqli_query($connect, $sqlStmt);
+			if($result) { echo "Insert Successful";	}
+			else { echo "<strong>Insert Failure</strong>\n<br>/<br>/"; }
+			
+			$sqlStmt = "INSERT INTO specials(name, type, price, description, url) VALUES ('6 Bucks 6 - 6 Choices!', 'food', 6, '$6 Lunch - Half Sub and Fries.', 'images/6bucks.jpg')";
+			echo "INSERT Statement: <code><pre>", htmlspecialchars($sqlStmt), "</pre></code><br/>\n";
+			$result = mysqli_query($connect, $sqlStmt);
+			if($result) { echo "Insert Successful";	}
+			else { echo "<strong>Insert Failure</strong>\n<br>/<br>/"; }
+			
+			$sqlStmt = "INSERT INTO specials(name, type, price, description, url) VALUES ('Wings & More Buffet', 'food', null, 'Every Wednesday & Sunday, 5-9pm', 'images/wings-buffet.jpg')";
+			echo "INSERT Statement: <code><pre>", htmlspecialchars($sqlStmt), "</pre></code><br/>\n";
+			$result = mysqli_query($connect, $sqlStmt);
+			if($result) { echo "Insert Successful";	}
+			else { echo "<strong>Insert Failure</strong>\n<br>/<br>/"; }
+			
+			$sqlStmt = "INSERT INTO specials(name, type, price, description, url) VALUES ('Trivia Night', 'food', null, 'Join us every Tuesday in Blacksburg and every Wednesday in Radford to win prizes!', 'images/trivia-night.jpg')";
+			echo "INSERT Statement: <code><pre>", htmlspecialchars($sqlStmt), "</pre></code><br/>\n";
+			$result = mysqli_query($connect, $sqlStmt);
+			if($result) { echo "Insert Successful";	}
+			else { echo "<strong>Insert Failure</strong>\n<br>/<br>/"; }
+			
+			$sqlStmt = "INSERT INTO specials(name, type, price, description, url) VALUES ('Thoughtful Thursdays', 'food', null, 'Every Thursday we will donate 10% of food sales to a local charity!', 'images/thoughtful-thursday.jpg')";
+			echo "INSERT Statement: <code><pre>", htmlspecialchars($sqlStmt), "</pre></code><br/>\n";
+			$result = mysqli_query($connect, $sqlStmt);
+			if($result) { echo "Insert Successful";	}
+			else { echo "<strong>Insert Failure</strong>\n<br>/<br>/"; }
+			
+			$sqlStmt = "INSERT INTO specials(name, type, price, description, url) VALUES ('Veterans Day Special', 'food', null, 'One Free meal for all veterans, plus half-off all food for your family!', 'images/veterans-special.jpg')";
+			echo "INSERT Statement: <code><pre>", htmlspecialchars($sqlStmt), "</pre></code><br/>\n";
+			$result = mysqli_query($connect, $sqlStmt);
+			if($result) { echo "Insert Successful";	}
+			else { echo "<strong>Insert Failure</strong>\n<br>/<br>/"; }
+		?>
+			
 		<h3>Committing Change</h3>
 		<?php
 			$commit_result = mysqli_query($connect, "COMMIT");

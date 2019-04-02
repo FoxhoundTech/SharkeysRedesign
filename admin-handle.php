@@ -59,7 +59,7 @@
 								</div>
 								<div class="card-body">
 									<p class="card-text">Approve/deny reservation requests, modify existing events, or schedule new events.   </p>
-									<a href="#" class="btn btn-primary">Manage Events</a>
+									<a href="events-manage.php" class="btn btn-primary">Manage Events</a>
 								</div>
 							</div>
 							<div class="card text-center col">
@@ -68,7 +68,7 @@
 								</div>
 								<div class="card-body">
 									<p class="card-text">Modify daily and weekly specials</p>
-									<a href="#" class="btn btn-primary">Manage specials</a>
+									<a href="specials-manage.php" class="btn btn-primary">Manage specials</a>
 								</div>
 							</div>
 						</div>
