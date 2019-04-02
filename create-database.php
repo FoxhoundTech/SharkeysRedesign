@@ -1094,7 +1094,7 @@
 			$result = mysqli_query($connect, $stmt161);
 			if($result) { echo "Insert Successful\n<br/>";	}
 
-			$stmt162 = "INSERT INTO beer(name, type, alcoholPercentage, craftedLocation, description) VALUES ('Budweiser Lager - North American Adjunct','Bottles/Cans',5,'Anheuser-Busch St. Louis, MO', 'Known as "The King of Beers," Budweiser was first introduced by Adolphus Busch in 1876 and it's still brewed with the same high standards today. Budweiser is a medium-bodied, flavorful, crisp American-style lager. Brewed with the best barley malt and a blend of premium hop varieties, it is an icon of core American values like optimism and celebration.')";
+			$stmt162 = "INSERT INTO beer(name, type, alcoholPercentage, craftedLocation, description) VALUES ('Budweiser Lager - North American Adjunct','Bottles/Cans',5,'Anheuser-Busch St. Louis, MO', 'Known as \"The King of Beers,\" Budweiser was first introduced by Adolphus Busch in 1876 and it's still brewed with the same high standards today. Budweiser is a medium-bodied, flavorful, crisp American-style lager. Brewed with the best barley malt and a blend of premium hop varieties, it is an icon of core American values like optimism and celebration.')";
 			echo "Insert Statement: <code><pre>", htmlspecialchars($stmt162), "</pre></code><br/>\n";
 			$result = mysqli_query($connect, $stmt162);
 			if($result) { echo "Insert Successful\n<br/>";	}
