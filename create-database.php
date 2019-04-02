@@ -974,7 +974,120 @@
 			$result = mysqli_query($connect, $stmt137);
 			if($result) { echo "Insert Successful\n<br/>";	}
 
-			//WIP still need to add the rest of the beers stopping here to make sure I'm even doing this right.
+			$stmt138 = "INSERT INTO beer(name, type, alcoholPercentage, craftedLocation, description) VALUES ('Beligian White - Witbier','Premium Standards',5.4,'Blue Moon Brewing Company Denver, CO', 'Blue Moon Belgian White, Belgian-style wheat ale, is a refreshing, medium-bodied, unfiltered Belgian-style wheat ale spiced with fresh coriander and orange peel for a uniquely complex taste and an uncommonly smooth finish.')";
+			echo "Insert Statement: <code><pre>", htmlspecialchars($stmt138), "</pre></code><br/>\n";
+			$result = mysqli_query($connect, $stmt138);
+			if($result) { echo "Insert Successful\n<br/>";	}
+			
+			$stmt139 = "INSERT INTO beer(name, type, alcoholPercentage, craftedLocation, description) VALUES ('Guinness Draught - Stout - Irish Dry','Premium Standards',4.2,'Guinness St. Jame\'s Gate, Dublin', 'Swirling clouds tumble as the storm begins to calm. Settle. Breathe in the moment, then break through the smooth, light head to the bittersweet reward. Unmistakeably GUINNESS, from the first velvet sip to the last, lingering drop. And every deep-dark satisfying mouthful in between. Pure beauty. Pure GUINNESS. Guinness Draught is sold in kegs, widget cans, and bottles. The ABV varies from 4.1 to 4.3%. Guinness Extra Cold is the exact same beer only served through a super cooler at 3.5 °C')";
+			echo "Insert Statement: <code><pre>", htmlspecialchars($stmt139), "</pre></code><br/>\n";
+			$result = mysqli_query($connect, $stmt139);
+			if($result) { echo "Insert Successful\n<br/>";	}
+			
+			$stmt140 = "INSERT INTO beer(name, type, alcoholPercentage, craftedLocation, description) VALUES ('Two Hearted Ale - IPA - American','Premium Standards',7,'Bell\'s Brewery Comstock, MI', 'Brewed with 100% Centennial hops from the Pacific Northwest and named after the Two Hearted River in Michigan’s Upper Peninsula, this IPA is bursting with hop aromas ranging from pine to grapefruit from massive hop additions in both the kettle and the fermenter. Perfectly balanced with a malt backbone and combined with the signature fruity aromas of Bell's house yeast, this beer is remarkably drinkable and well suited for adventures everywhere.')";
+			echo "Insert Statement: <code><pre>", htmlspecialchars($stmt140), "</pre></code><br/>\n";
+			$result = mysqli_query($connect, $stmt140);
+			if($result) { echo "Insert Successful\n<br/>";	}
+			
+			$stmt141 = "INSERT INTO beer(name, type, alcoholPercentage, craftedLocation, description) VALUES ('Vienna Lager - Lager - Vienna','Premium Standards',5.2,'Davil\'s Backbone Brewing Company Roseland, VA', 'This is our Ol’ Faithful. No, it’s not a geothermal phenomenon. It’s the beer everybody, including professional beer judges, just seems to dig. Maybe they like how it’s smooth, medium-bodied, and semi-sweet, while not too heavy or bitter. Maybe it’s the amber color, or the blend of four imported malts balanced by two Germanic hops, or the fact that it takes five weeks to get right. Or maybe it’s all the above.')";
+			echo "Insert Statement: <code><pre>", htmlspecialchars($stmt141), "</pre></code><br/>\n";
+			$result = mysqli_query($connect, $stmt141);
+			if($result) { echo "Insert Successful\n<br/>";	}
+			
+			$stmt142 = "INSERT INTO beer(name, type, alcoholPercentage, craftedLocation, description) VALUES ('Pine\'Hop\'Le - IPA - American','Rotating Taps',6.8,'Evolution Craft Brewing Company Salisbury, MD', 'A tropical take on our classic American IPA; our pineapple IPA packs juicy fruit flavor with bold character. Brewed with loads of pineapple juice and aggressively hopped for big citrus notes.')";
+			echo "Insert Statement: <code><pre>", htmlspecialchars($stmt142), "</pre></code><br/>\n";
+			$result = mysqli_query($connect, $stmt142);
+			if($result) { echo "Insert Successful\n<br/>";	}
+			
+			$stmt143 = "INSERT INTO beer(name, type, alcoholPercentage, craftedLocation, description) VALUES ('Green Apple - Cider - Other','Rotating Taps',5,'McKenzie\'s Hard Cider Utica, NY', 'McKenzie's Green Apple Hard Cider has quite the kick. Maybe it's the deliciously crisp, slightly tart bite of green apples or the 5% alcohol.')";
+			echo "Insert Statement: <code><pre>", htmlspecialchars($stmt143), "</pre></code><br/>\n";
+			$result = mysqli_query($connect, $stmt143);
+			if($result) { echo "Insert Successful\n<br/>";	}
+			
+			$stmt144 = "INSERT INTO beer(name, type, alcoholPercentage, craftedLocation, description) VALUES ('Nitro Red Chair NWPA - Pale Ale - American','Rotating Taps',6.2,'Deschutes Brewery Bend, OR', 'The citrus punch of a big IPA, minus the one-dimensional hop sledgehammer. Seven select European and domestic malts round out the edges for a complex, copper-colored brew. Like its namesake skilift, it’s an insider’s ride to fresh thrills.')";
+			echo "Insert Statement: <code><pre>", htmlspecialchars($stmt144), "</pre></code><br/>\n";
+			$result = mysqli_query($connect, $stmt144);
+			if($result) { echo "Insert Successful\n<br/>";	}
+			
+			$stmt145 = "INSERT INTO beer(name, type, alcoholPercentage, craftedLocation, description) VALUES ('Cellar Series: Chocolate - Cider - Other','Rotating Taps',6.9,'Woodchuck Cidery Middlebury, VT', 'Woodchuck Cellar Series Chocolate features our original small batch hard cider, complemented by cacao beans. The infusion of crushed cacao beans brings notes of artisan chocolate throughout the nose and taste of the cider. A hint of caramel acccompanies the full apple flavor with a dry finish. Cellar Series Chocolate is one of the most unique ciders we have ever crafted, and we hope you enjoy it as much as we do. Cheers!')";
+			echo "Insert Statement: <code><pre>", htmlspecialchars($stmt145), "</pre></code><br/>\n";
+			$result = mysqli_query($connect, $stmt145);
+			if($result) { echo "Insert Successful\n<br/>";	}
+			
+			$stmt146 = "INSERT INTO beer(name, type, alcoholPercentage, craftedLocation, description) VALUES ('Shower Beer - Pilsner - Czech','Rotating Taps',4.5,'Champion Brewing Company Charlottesville, VA', 'Perfect for any relaxing occasion, this Bohemian Pilsner sings with fresh, clean maltiness and spicy flavor and aroma contributions from 100% traditional Czech Saaz hops. Aged cold on Lager yeast for weeks for maximum refreshment. If you've never had a Shower Beer, it's high time. Winner of Gold Medal in the Bohemian-Style Pilsner category at the 2015 Great American Beer Festival.')";
+			echo "Insert Statement: <code><pre>", htmlspecialchars($stmt146), "</pre></code><br/>\n";
+			$result = mysqli_query($connect, $stmt146);
+			if($result) { echo "Insert Successful\n<br/>";	}
+			
+			$stmt147 = "INSERT INTO beer(name, type, alcoholPercentage, craftedLocation, description) VALUES ('Rebel Ale - Red Ale - American Amber/Red','Rotating Taps',5.8,'Shooting Creek Farm Brewery Floyd, VA', 'A great session beer for hot or cold weather. Brewed with malted barley and rye for a unique flavor-quenching zip, rich malt character, and deep amber glow. Moderately bittered using Cascade hops grown by Shooting Creek Farm brewery.')";
+			echo "Insert Statement: <code><pre>", htmlspecialchars($stmt147), "</pre></code><br/>\n";
+			$result = mysqli_query($connect, $stmt147);
+			if($result) { echo "Insert Successful\n<br/>";	}
+			
+			$stmt148 = "INSERT INTO beer(name, type, alcoholPercentage, craftedLocation, description) VALUES ('Nu Skool IPA - IPA - American','Rotating Taps',6,'Southern Tier Brewing Company Lakewood, NY', 'After over a year of prototyping R&D batches of Nu Skool IPA, this final version is one special beer. It’s an approachable, well-balanced IPA with slight malty sweetness that’s brimming with tropical, fruity, spicy, piney & citrus character. To contrast our IPA (brewed since 2002), which most closely resembles a traditional English IPA in malt & hop bills, we wanted to brew an IPA in a new way. Like craft brewers, hop farmers have come a long way. This beer showcases just how far we’ve come with alluring aromas & explosive flavors using only new American & experimental hops. There’s no need to add anything else. It’s time to graduate to the next level of hop flavors with Nu Skool IPA. HOP PROCESS: We used 3.5 lbs. of “new school” varieties of hops per barrel of beer. We load our hopback to the brim with Mosaic hops for a big tropical fruit character. A nice whirlpool dose of experimental hop #07270 gives the beer a flavorful, resinous character. We then dry hop this beer on two separate days with a large amount of Mosaic hops in our hop cannon & Simcoe + Equinox two days later.')";
+			echo "Insert Statement: <code><pre>", htmlspecialchars($stmt148), "</pre></code><br/>\n";
+			$result = mysqli_query($connect, $stmt148);
+			if($result) { echo "Insert Successful\n<br/>";	}
+			
+			$stmt149 = "INSERT INTO beer(name, type, alcoholPercentage, craftedLocation, description) VALUES ('Oberon Ale - Pale Wheat Ale - American','Rotating Taps',5.8,'Bell\s Brewery Comstock, MI', 'Bell's Oberon is a wheat ale fermented with Bell's signature house ale yeast, mixing a spicy hop character with mildly fruity aromas. The addition of wheat malt lends a smooth mouthfeel, making it a classic summer beer.')";
+			echo "Insert Statement: <code><pre>", htmlspecialchars($stmt149), "</pre></code><br/>\n";
+			$result = mysqli_query($connect, $stmt149);
+			if($result) { echo "Insert Successful\n<br/>";	}
+			
+			$stmt150 = "INSERT INTO beer(name, type, alcoholPercentage, craftedLocation, description) VALUES ('Bud Light - Lager - American','Standards',4.2,'Anheuser-Busch St. Louis, MO', 'Bud Light is brewed using a blend of premium aroma hop varieties, both American-grown and imported, and a combination of barley malts and rice. Its superior drinkability and refreshing flavor makes it the world’s favorite light beer.')";
+			echo "Insert Statement: <code><pre>", htmlspecialchars($stmt150), "</pre></code><br/>\n";
+			$result = mysqli_query($connect, $stmt150);
+			if($result) { echo "Insert Successful\n<br/>";	}
+			
+			$stmt151 = "INSERT INTO beer(name, type, alcoholPercentage, craftedLocation, description) VALUES ('Coors Light - Lager - American Light','Standards',4.2,'Coors Brewing Company Golden, CO', 'Coors Light is Coors Brewing Company's largest-selling brand and the fourth best-selling beer in the U.S. Introduced in 1978, Coors Light has been a favorite in delivering the ultimate in cold refreshment for more than 25 years. The simple, silver-toned can caught people's attention and the brew became nicknamed the Silver Bullet as sales climbed.')";
+			echo "Insert Statement: <code><pre>", htmlspecialchars($stmt151), "</pre></code><br/>\n";
+			$result = mysqli_query($connect, $stmt151);
+			if($result) { echo "Insert Successful\n<br/>";	}
+			
+			$stmt152 = "INSERT INTO beer(name, type, alcoholPercentage, craftedLocation, description) VALUES ('Miller Lite - Lager - American Light','Standards',4.2,'Miller Brewing Company Milwaukee, WI', 'Our flagship brand, Miller Lite, is the great tasting, less filling beer that defined the American light beer category in 1975. We deliver a clear, simple message to consumers: \Miller Lite is the better beer choice.\" What's our proof? 1) Miller Lite is the original light beer. 2) Miller Lite has real beer taste because it's never watered down. 3) Miller Lite is the only beer to win four gold awards in the World Beer Cup for best American-style light lager. (2006)')";
+			echo "Insert Statement: <code><pre>", htmlspecialchars($stmt152), "</pre></code><br/>\n";
+			$result = mysqli_query($connect, $stmt152);
+			if($result) { echo "Insert Successful\n<br/>";	}
+			
+			$stmt153 = "INSERT INTO beer(name, type, alcoholPercentage, craftedLocation, description) VALUES ('Traditional Lager - Lager - American Amber/Red','Standards',4.5,'Yuengling Brewery Pottsville, PA', 'Famous for its rich amber color and medium-bodied flavor with roasted caramel malt for a subtle sweetness and a combination of cluster and cascade hops, this true original delivers a well-balanced taste with very distinct character. Born from a historic recipe that was resurrected in 1987, Yuengling Traditional Lager is a true classic. Learn more: http://www.yuengling.com/lager')";
+			echo "Insert Statement: <code><pre>", htmlspecialchars($stmt153), "</pre></code><br/>\n";
+			$result = mysqli_query($connect, $stmt153);
+			if($result) { echo "Insert Successful\n<br/>";	}
+			
+			$stmt154 = "INSERT INTO beer(name, type, alcoholPercentage, craftedLocation, description) VALUES ('Modelo Especial - Lager - North American Adjunct','Seasonal/Limited',4.5,'Grupo Modelo Mexico City, Distrito Federal', 'Modelo Especial, a pilsener type beer, was introduced to the market in 1966. Today it is sold in glass bottles as well as cans, which are having an increasing demand due to consumer preferences, making Modelo Especial the leader in the can segment in Mexico.')";
+			echo "Insert Statement: <code><pre>", htmlspecialchars($stmt154), "</pre></code><br/>\n";
+			$result = mysqli_query($connect, $stmt154);
+			if($result) { echo "Insert Successful\n<br/>";	}
+			
+			$stmt155 = "INSERT INTO beer(name, type, alcoholPercentage, craftedLocation, description) VALUES ('Passion Fruit Kicker - Fruit Beer','Seasonal/Limited',5.5,'Green Flash Brewing Company San Diego, CA', 'We’ve kicked it up a notch by adding a tropical twist to this refreshing ale. Get amped on Passion Fruit Kicker – a jaw-dropping, mouth-watering, smooth brew with sweet, tart, fruity flavor. We layer passion fruit tea and passion fruit juice with wheat malt and 2-row malted barley to bring you this exhilarating crowd pleaser. Your palate will do a 360 for more of this luscious wheat ale.')";
+			echo "Insert Statement: <code><pre>", htmlspecialchars($stmt155), "</pre></code><br/>\n";
+			$result = mysqli_query($connect, $stmt155);
+			if($result) { echo "Insert Successful\n<br/>";	}
+			
+			$stmt156 = "INSERT INTO beer(name, type, alcoholPercentage, craftedLocation, description) VALUES ('Nugget Nectar - Red Ale - Imperial/Double','Seasonal/Limited',7.5,'Tröegs Independent Brewing Hershey, PA', 'Squeeze those hops for all they're worth and prepare to pucker up: Nugget Nectar Ale, will take hopheads to nirvana with a heady collection of Nugget, Warrior and Tomahawk hops. Starting with the same base ingredients of our flagship HopBack Amber Ale, Nugget Nectar intensifies the malt and hop flavors to create an explosive hop experience.')";
+			echo "Insert Statement: <code><pre>", htmlspecialchars($stmt156), "</pre></code><br/>\n";
+			$result = mysqli_query($connect, $stmt156);
+			if($result) { echo "Insert Successful\n<br/>";	}
+			
+			$stmt157 = "INSERT INTO beer(name, type, alcoholPercentage, craftedLocation, description) VALUES ('Milk Stout Nitro - Stout - Milk/Sweet','Seasonal/Limited',6,'Left Hand Brewing Company Longmont, CO', 'POUR HARD! Dark & delicious, America’s milk stout will change your perception about what a stout can be. Pouring hard out of the bottle, Milk Stout Nitro cascades beautifully, building a tight, thick head like hard whipped cream. The aroma is of brown sugar and vanilla cream, with hints of roasted coffee. The pillowy head coats your upper lip and its creaminess entices your palate. Initial roasty, mocha flavors rise up, with slight hop & roast bitterness in the finish. The rest is pure bless of milk chocolate fullness. Famous for their Nitro series, Left Hand Brewing was the first craft brewery to release a bottled nitrogenated beer. For the best experience, pour hard at 180 degrees into a 16oz glass. Different gas, different pour. Cheers! #PourHard')";
+			echo "Insert Statement: <code><pre>", htmlspecialchars($stmt157), "</pre></code><br/>\n";
+			$result = mysqli_query($connect, $stmt157);
+			if($result) { echo "Insert Successful\n<br/>";	}
+			
+			$stmt158 = "INSERT INTO beer(name, type, alcoholPercentage, craftedLocation, description) VALUES ('Longboard Island Lager - Lager - Pale','Seasonal/Limited',4.6,'Kona Brewing Company Kailua Kona, HI', 'A smooth refreshing lager fermented and aged for five weeks at cold temperatures to yield its exceptionally smooth flavor. A delicate, slightly spicy hop aroma complements the malty body of this beer.')";
+			echo "Insert Statement: <code><pre>", htmlspecialchars($stmt158), "</pre></code><br/>\n";
+			$result = mysqli_query($connect, $stmt158);
+			if($result) { echo "Insert Successful\n<br/>";	}
+			
+			$stmt159 = "INSERT INTO beer(name, type, alcoholPercentage, craftedLocation, description) VALUES ('Strawberry Lager - Fruit Beer','Seasonal/Limited',4.2,'Abita Brewing Company Abita Springs, LA', 'The juice of red, ripe Louisiana strawberries, harvested at the peak of the season, gives this crisp lager its strawberry flavor, aroma and haze. Made with pilsner and wheat malts and Vanguard hops, all our Harvest Series brews are made with the finest Louisiana-grown ingredients.')";
+			echo "Insert Statement: <code><pre>", htmlspecialchars($stmt159), "</pre></code><br/>\n";
+			$result = mysqli_query($connect, $stmt159);
+			if($result) { echo "Insert Successful\n<br/>";	}
+			
+			$stmt159 = "INSERT INTO beer(name, type, alcoholPercentage, craftedLocation, description) VALUES ('','Bottles/Cans',4.2,'', '')";
+			echo "Insert Statement: <code><pre>", htmlspecialchars($stmt159), "</pre></code><br/>\n";
+			$result = mysqli_query($connect, $stmt159);
+			if($result) { echo "Insert Successful\n<br/>";	}
 
 		?>
 		
