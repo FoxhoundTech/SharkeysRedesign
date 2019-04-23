@@ -157,3 +157,7 @@ body {
 .blacksburg-feed {
     margin-left: 45%;
 }
+
+a {
+	color: inherit;
+}
