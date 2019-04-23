@@ -144,3 +144,16 @@ body {
 	float: right;
 	text-align: right;
 }
+
+.social-feed {
+    margin: auto;
+    padding: 10px;
+}
+.radford-feed {
+    width: 15%;
+	margin-left: 15%;
+    float: left;
+}
+.blacksburg-feed {
+    margin-left: 45%;
+}

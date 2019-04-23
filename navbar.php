@@ -19,13 +19,13 @@
 			<a href="javascript:void(0);" class="icon" onclick="myFunction()">
 				<i class="fa fa-bars"></i>
 			</a>
-			<a id='location' href="#locations">Locations</a>
+			<a id='location' href="locations">Locations</a>
 			<a id='events' href="events.php">Events</a>
 			<a id='specials' href="specials.php">Specials</a>
 			<a id='drink' href="drink-menu.php">Drinks</a>
 			<a id='admin' href="admin.php">Admin</a>
 			<a id='menu' href="menu.php">Menu</a>
-			<a id='home' href="home.php">Home</a>
+			<a id='home' href="index.php">Home</a>
 		</div>
 	</body>
 </html>
