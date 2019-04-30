@@ -1,4 +1,5 @@
 <?php 
+
 	error_reporting(e_all);
 	ini_set('display_errors', 1);
 	require_once("se_db_password.php"); 
@@ -87,37 +88,37 @@
 						<div class="form-row justify-content-center">
 							<div class="form-group col-md-4">
 								<label for="inputName">Name:</label>
-								<input type="text" class="form-control" id="inputName" name="inputName" placeholder="Enter Name">
+								<input type="text" class="form-control" id="inputName" name="inputName" placeholder="Enter Name" required>
 							</div>
 							<div class="form-group col-md-4">
 								<label for="inputType">Type of Event:</label>
-								<input type="text" class="form-control" id="inputType"  name="inputType" placeholder="Enter Event Type">
+								<input type="text" class="form-control" id="inputType"  name="inputType" placeholder="Enter Event Type" required>
 							</div>
 						</div>
 						<div class="form-row justify-content-center">
 							<div class="form-group col-md-4">
 								<label for="inputPhone">Phone:</label>
-								<input type="tel" class="form-control" id="inputPhone" name="inputPhone" placeholder="Enter Phone">
+								<input type="tel" class="form-control" id="inputPhone" name="inputPhone" placeholder="Enter Phone" required>
 							</div>
 							<div class="form-group col-md-4">
 								<label for="inputDate">Event Date:</label>
-								<input type="text" class="form-control" id="inputDate" name="inputDate" placeholder="Select Date">
+								<input type="text" class="form-control" id="inputDate" name="inputDate" placeholder="Select Date" required>
 							</div>
 						</div>
 						<div class="form-row justify-content-center">
 							<div class="form-group col-md-4">
 								<label for="inputEmail">Email:</label>
-								<input type="email" class="form-control" id="inputEmail" name="inputEmail" placeholder="Enter Email">
+								<input type="email" class="form-control" id="inputEmail" name="inputEmail" placeholder="Enter Email" required>
 							</div>
 							<div class="form-group col-md-4">
 								<label for="inputGuests">Number of Guests:</label>
-								<input type="number" class="form-control" id="inputGuests" name="inputGuests" placeholder="Enter Guest Count">
+								<input type="number" class="form-control" id="inputGuests" name="inputGuests" placeholder="Enter Guest Count" required>
 							</div>
 						</div>
 						<div class="form-row justify-content-center">
 							<div class="form-group col-md-8">
 								<label for="inputComments">Questions / Comments:</label>
-								<textarea class="form-control" id="inputComments" name="inputComments" rows="10"></textarea>
+								<textarea class="form-control" id="inputComments" name="inputComments" rows="10" required></textarea>
 							</div>
 						</div>
 						<div class="text-center"><button class="btn btn-primary" onclick="#">Submit Request</button></div>

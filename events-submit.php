@@ -62,6 +62,11 @@
 			$result = mysqli_query($connect, $sqlStmt);
 			if($result) {
 				$success = true;
+				
+				$admin_email = "jkolts@radford.edu";
+				$subject = "New Sharkey's Event Request";
+				$body = "Contact: " . $contact ."\nType of Event: " . $type . "\nPhone: " . $phone . "\nWhen: " . $date . "\nEmail: " . $email . "\nGuest Count: " . $guests . "\nComments: " . stripslashes($comments);
+				mail( $admin_email, $subject, $body, "From:" . $email );
 			}
 			else {
 				$success = false;

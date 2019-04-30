@@ -43,6 +43,15 @@
 		return $result;
 	}
 	
+	function drinkify( $name, $type, $alcoholPercentage, $craftedLocation, $description ) {		
+		return "<div class=\"col-sm\">
+						<div class=\"card-body\">
+							<h5 class=\"card-title\">$name</h5>
+							<h6 class=\"card-text\">$description</h6>
+						</div>
+					</div>";
+	}
+	
 	
 	//editTable: string, int, string -> table row
 	//purpose: given a $header, $title, $price, and $description generates the html to create a table  row
