@@ -22,6 +22,7 @@
 	</head>	
 	<body>
 		<?php require_once("navbar.php"); ?>
+		<br/><br/>
 		
 		<div class="pt-5 text-center">
 			<h1 style="color: white">Menu</h1>
@@ -148,7 +149,7 @@
 					</div>
 				</div>
 			</div>
-			
+			<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
 		</div>
 		
 		

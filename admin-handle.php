@@ -21,15 +21,19 @@
 	</head>
 	<body>
 		<?php
-			session_start();
-			require_once("navbar.php"); 
+			if((isset($_POST['username']) && isset($_POST['password']))) {
+				$user = $_POST['username'];
+				$pass = $_POST['password'];
+				
+			} else {
+				header("Location: ./admin.php");
+				die();
+			}
+			
 			require_once("se_db_password.php"); 
 			$connect = mysqli_connect("localhost", "jsimmons49", $mysql_password, "jsimmons49");
 
 			if (mysqli_connect_error()) { echo "Error details: ", mysqli_connect_error(), "\n"; }
-			
-			$user = $_POST['username'];
-			$pass = $_POST['password'];
 			
 			//Fetch 
 			$SQLcmd = "SELECT * FROM Login WHERE username = '$user'";
@@ -40,42 +44,9 @@
 			$db_password = $row['password'];
 			
 			//If Password and username is correct
-			if (($user === $db_username && $pass === $db_password) || (isset($_SESSION["SharkLogged"]) && !empty($_SESSION["SharkLogged"]))) {
-				?>
-					<div class="pt-5 pb-5"></div> <!--Extra Padding-->
-					<div class="container pt-5" id="admin-cards">
-						<div class="row">
-							<div class="card text-center col mr-2">
-								<div class="card-header">
-									Menu
-								</div>
-								<div class="card-body">
-									<p class="card-text">Add, delete, and update items on the menu</p>
-									<a href="menu-modify.php" class="btn btn-primary">Manage Menu</a>
-								</div>
-							</div>
-							<div class="card text-center col-6 mr-2">
-								<div class="card-header">
-									Events
-								</div>
-								<div class="card-body">
-									<p class="card-text">Approve/deny reservation requests, modify existing events, or schedule new events.   </p>
-									<a href="events-manage.php" class="btn btn-primary">Manage Events</a>
-								</div>
-							</div>
-							<div class="card text-center col">
-								<div class="card-header">
-									Specials
-								</div>
-								<div class="card-body">
-									<p class="card-text">Modify daily and weekly specials</p>
-									<a href="specials-manage.php" class="btn btn-primary">Manage specials</a>
-								</div>
-							</div>
-						</div>
-					</div>
-				<?php
+			if (($user === $db_username && $pass === $db_password)) {
 				$_SESSION["SharkLogged"] = "True";
+				header("Location: ./admin-menu.php");
 			}
 			else {
 				mysqli_close($connect);	
@@ -85,7 +56,6 @@
 			
 			mysqli_close($connect);
 		?>
-	
 		
 		<script>
 			function updateNavbar() {
