@@ -3,7 +3,7 @@
 	ini_set('display_errors', 1);
 	require_once("se_db_password.php"); 
 	require_once("utils.php");
-	$connect = mysqli_connect("localhost", "jkolts", $mysql_password, "jkolts");
+	$connect = mysqli_connect("localhost", "jsimmons49", $mysql_password, "jsimmons49");
 	$title = "Events";
 ?>
 <!DOCTYPE html>
@@ -62,6 +62,11 @@
 			$result = mysqli_query($connect, $sqlStmt);
 			if($result) {
 				$success = true;
+				
+				$admin_email = "jkolts@radford.edu";
+				$subject = "New Sharkey's Event Request";
+				$body = "Contact: " . $contact ."\nType of Event: " . $type . "\nPhone: " . $phone . "\nWhen: " . $date . "\nEmail: " . $email . "\nGuest Count: " . $guests . "\nComments: " . stripslashes($comments);
+				mail( $admin_email, $subject, $body, "From:" . $email );
 			}
 			else {
 				$success = false;

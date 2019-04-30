@@ -24,6 +24,10 @@
 	</head>
 	<body>
 		<?php require_once("navbar.php"); 
+			session_start();
+			if(!(isset($_SESSION["SharkLogged"]) && !empty($_SESSION["SharkLogged"]))) {
+				header("Location: ./admin.php");
+			}
 			
 			$aName = mysqli_real_escape_string($connect, $_POST['name']);
 			$aCategory = mysqli_real_escape_string($connect, $_POST['category']);

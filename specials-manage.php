@@ -27,7 +27,12 @@
 		<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 	</head>
 	<body>
-		<?php require_once("navbar.php"); ?>
+		<?php require_once("navbar.php"); 
+			session_start();
+			if(!(isset($_SESSION["SharkLogged"]) && !empty($_SESSION["SharkLogged"]))) {
+				header("Location: ./admin.php");
+			}
+		?>
 		
 		<div class="pt-5 pb-5"></div>
 		<div class="row pt-5 mb-5">

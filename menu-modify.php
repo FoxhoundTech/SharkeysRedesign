@@ -24,7 +24,12 @@
 		<link rel="stylesheet" type="text/css" href="sharkeys.css">
 	</head>
 	<body>
-		<?php require_once("navbar.php"); ?>
+		<?php require_once("navbar.php"); 
+			session_start();
+			if(!(isset($_SESSION["SharkLogged"]) && !empty($_SESSION["SharkLogged"]))) {
+				header("Location: ./admin.php");
+			}
+		?>
 		
 		<div class="pt-5 pb-5"></div>
 		<div class="row pt-5">
@@ -65,10 +70,10 @@
 					<form action='menu-modify-handle.php' method='post'>
 						<div class="form-group">
 							<label for="name">Name:</label>
-							<input type="text" class="form-control" id="name" name="name" placeholder="Enter name">
+							<input type="text" class="form-control" id="name" name="name" placeholder="Enter name" required>
 							<label for="category">Category:</label>
-							<select class="form-control" id="category" name="category">
-								<option>Select Category</option>
+							<select class="form-control" id="category" name="category" required>
+								<option selected disabled>Select Category</option>
 								<?php 
 									foreach( $foodAllowed AS $value ) {
 										echo "<option>$value</option>";
@@ -76,9 +81,9 @@
 								?>
 							</select>
 							<label for="price">Price:</label>
-							<input type="number" class="form-control" id="price" name="price" placeholder="Enter price" min="0" step="0.01">
+							<input type="number" class="form-control" id="price" name="price" placeholder="Enter price" min="0" step="0.01" required>
 							<label for="description">Description</label>
-							<textarea class="form-control" id="description" name="description" rows="3"></textarea>	
+							<textarea class="form-control" id="description" name="description" rows="3" required></textarea>	
 							<input class="form-control btn btn-primary" type="submit">
 						</div>
 					</form>

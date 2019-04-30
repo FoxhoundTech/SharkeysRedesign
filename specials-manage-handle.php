@@ -26,6 +26,10 @@
 	<body>
 		<?php
 			require_once("navbar.php"); 
+			session_start();
+			if(!(isset($_SESSION["SharkLogged"]) && !empty($_SESSION["SharkLogged"]))) {
+				header("Location: ./admin.php");
+			}
 			
 			$name = mysqli_real_escape_string($connect, $_GET['name']);
 			$SQLcmd = "SELECT * FROM specials WHERE name='$name'";

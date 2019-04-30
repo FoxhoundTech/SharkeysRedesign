@@ -17,7 +17,12 @@
 		<meta charset="utf-8" />
 	</head>
 	<body>
-		<?php require_once("navbar.php"); ?>
+		<?php require_once("navbar.php"); 
+			session_start();
+			if(isset($_SESSION["SharkLogged"]) && !empty($_SESSION["SharkLogged"])) {
+				header("Location: ./admin-handle.php");
+			}
+		?>
 		<div class="login">
 			<h3>Login:</h3>
 			<form action="admin-handle.php" method='post'>

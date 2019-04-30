@@ -26,6 +26,10 @@
 	<body>
 		<?php 
 			require_once("navbar.php"); 
+			session_start();
+			if(!(isset($_SESSION["SharkLogged"]) && !empty($_SESSION["SharkLogged"]))) {
+				header("Location: ./admin.php");
+			}
 		
 			$item = mysqli_real_escape_string($connect, $_GET['name']);
 			$SQLcmd = "SELECT * FROM menu WHERE name='$item'";
@@ -49,10 +53,10 @@
 					<form action='edit-food-handle.php' method='post'>
 						<div class="form-group">
 							<label for="name">Name:</label>
-							<input type="text" class="form-control" id="name" name="name" value="<?php echo htmlspecialchars($item); ?>">
+							<input type="text" class="form-control" id="name" name="name" value="<?php echo htmlspecialchars($item); ?>" required>
 							<label for="category">Category:</label>
 							<select class="form-control selectpicker" id="category" name="category" required>
-								<option>Select Category</option>
+								<option selected disabled>Select Category</option>
 								<?php 
 									foreach( $foodAllowed AS $value ) {
 										echo "<option>$value</option>";
@@ -60,9 +64,9 @@
 								?>
 							</select>
 							<label for="price">Price:</label>
-							<input type="number" class="form-control" id="price" name="price" value="<?php echo htmlspecialchars($price); ?>" min="0" step="0.01">
+							<input type="number" class="form-control" id="price" name="price" value="<?php echo htmlspecialchars($price); ?>" min="0" step="0.01" required>
 							<label for="description">Description</label>
-							<textarea class="form-control" id="description" name="description" rows="3"><?php echo htmlspecialchars($description); ?></textarea>	
+							<textarea class="form-control" id="description" name="description" rows="3" required><?php echo htmlspecialchars($description); ?></textarea>	
 							<input class="form-control btn btn-primary" type="submit">
 						</div>
 					</form>

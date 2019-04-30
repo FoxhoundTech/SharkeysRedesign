@@ -21,6 +21,7 @@
 	</head>
 	<body>
 		<?php
+			session_start();
 			require_once("navbar.php"); 
 			require_once("se_db_password.php"); 
 			$connect = mysqli_connect("localhost", "jsimmons49", $mysql_password, "jsimmons49");
@@ -39,7 +40,7 @@
 			$db_password = $row['password'];
 			
 			//If Password and username is correct
-			if ($user === $db_username && $pass === $db_password) {
+			if (($user === $db_username && $pass === $db_password) || (isset($_SESSION["SharkLogged"]) && !empty($_SESSION["SharkLogged"]))) {
 				?>
 					<div class="pt-5 pb-5"></div> <!--Extra Padding-->
 					<div class="container pt-5" id="admin-cards">
@@ -74,10 +75,11 @@
 						</div>
 					</div>
 				<?php
+				$_SESSION["SharkLogged"] = "True";
 			}
 			else {
 				mysqli_close($connect);	
-				header("Location: https://php.radford.edu/~jkolts/se/admin.php"); //Return to Login page if incorrect username/pw
+				header("Location: ./admin.php"); //Return to Login page if incorrect username/pw
 				exit();
 			}
 			

@@ -4,7 +4,7 @@
 	require_once("utils.php");
 	require_once("sharkeys-constants.php");
 	global $foodAllowed;
-	$connect = mysqli_connect("localhost", "jkolts", $mysql_password, "jkolts");
+	$connect = mysqli_connect("localhost", "jsimmons49", $mysql_password, "jsimmons49");
 	/*
 		Sharkey's Website Redesign 
 		Created by Foxhound Tech
@@ -26,6 +26,10 @@
 	<body>
 		<?php 
 			require_once("navbar.php");
+			session_start();
+			if(!(isset($_SESSION["SharkLogged"]) && !empty($_SESSION["SharkLogged"]))) {
+				header("Location: ./admin.php");
+			}
 		
 			$id = mysqli_real_escape_string($connect, $_GET['id']);
 			$SQLcmd = "SELECT * FROM events WHERE id='$id'";
