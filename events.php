@@ -2,9 +2,9 @@
 
 	error_reporting(e_all);
 	ini_set('display_errors', 1);
-	require_once("se_db_password.php"); 
+	require_once("db_info.php"); 
 	require_once("utils.php");
-	$connect = mysqli_connect("localhost", "jsimmons49", $mysql_password, "jsimmons49");
+	$connect = mysqli_connect($mysql_hostname, $mysql_username, $mysql_password, $mysql_db);
 	$title = "Events";
 ?>
 <!DOCTYPE html>

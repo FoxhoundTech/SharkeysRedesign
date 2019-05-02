@@ -10,8 +10,8 @@
 	<h2>Resetting the Database</h2>
 		<h3>Connect to the DB</h3>
 		<?php
-			require_once("se_db_password.php"); 
-			$connect = mysqli_connect("localhost", "jsimmons49", $mysql_password, "jsimmons49");
+			require_once("db_info.php"); 
+			$connect = mysqli_connect($mysql_hostname, $mysql_username, $mysql_password, $mysql_db);
 
 			echo "Connection ", ($connect ? "" : "NOT "), "established.<br />\n";
 			if (mysqli_connect_error()) { echo "Error details: ", mysqli_connect_error(), "\n"; }
@@ -322,8 +322,8 @@
 			else { echo "<strong>Insert Failure</strong>\n<br>/<br>/"; }
 			
 			$stmt27 = "INSERT INTO menu(name, type, price, description) VALUES ('Soup and Salad Combo','Salads',9,'A large cup of our homemade soup, chili, or veggie chili and a side tossed salad or side Caesar salad.')";
-			echo "Insert Statement: <code><pre>", htmlspecialchars($stmt20), "</pre></code><br/>\n";
-			$result = mysqli_query($connect, $stmt20);
+			echo "Insert Statement: <code><pre>", htmlspecialchars($stmt27), "</pre></code><br/>\n";
+			$result = mysqli_query($connect, $stmt27);
 			if($result) { echo "Insert Successful\n<br/>";	}
 			else { echo "<strong>Insert Failure</strong>\n<br>/<br>/"; }
 			

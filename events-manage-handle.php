@@ -1,10 +1,10 @@
 <?php
 	error_reporting(e_all);
-	require_once("se_db_password.php"); 
+	require_once("db_info.php"); 
 	require_once("utils.php");
 	require_once("sharkeys-constants.php");
 	global $foodAllowed;
-	$connect = mysqli_connect("localhost", "jsimmons49", $mysql_password, "jsimmons49");
+	$connect = mysqli_connect($mysql_hostname, $mysql_username, $mysql_password, $mysql_db);
 	/*
 		Sharkey's Website Redesign 
 		Created by Foxhound Tech

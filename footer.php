@@ -16,7 +16,7 @@
 			<div class='copyright-info'>
 				<p>Copyright 2018. All Rights Reserved.</p>
 				<p>Site by Foxhound Tech<p>
-				<a href="http://nebula.wsimg.com/f543a495609a0478e3ec2d78472b6af8?AccessKeyId=3AF9510BFFDF9C352E2C&disposition=0&alloworigin=1">Apply Here!</a>
+				<a href="http://nebula.wsimg.com/f543a495609a0478e3ec2d78472b6af8?AccessKeyId=3AF9510BFFDF9C352E2C&disposition=0&alloworigin=1">Click Here to Apply!</a>
 			</div>
 		</div>
 	</body>

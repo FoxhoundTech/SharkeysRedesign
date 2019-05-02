@@ -25,13 +25,16 @@
 				$user = $_POST['username'];
 				$pass = $_POST['password'];
 				
+			} else if(isset($_SESSION["SharkLogged"]) && !empty($_SESSION["SharkLogged"])) {
+				header("Location: ./admin-menu.php");
+				die();
 			} else {
 				header("Location: ./admin.php");
 				die();
 			}
 			
-			require_once("se_db_password.php"); 
-			$connect = mysqli_connect("localhost", "jsimmons49", $mysql_password, "jsimmons49");
+			require_once("db_info.php"); 
+			$connect = mysqli_connect($mysql_hostname, $mysql_username, $mysql_password, $mysql_db);
 
 			if (mysqli_connect_error()) { echo "Error details: ", mysqli_connect_error(), "\n"; }
 			
